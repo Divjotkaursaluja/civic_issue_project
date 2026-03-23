@@ -39,4 +39,4 @@ COPY . .
 EXPOSE 8000
 
 # Run server
-CMD ["gunicorn", "--bind", "0.0.0.0:8000", "civic_project.wsgi:application"]
+CMD ["gunicorn", "--bind", "0.0.0.0:8000", "civicbackend.wsgi:application"]
