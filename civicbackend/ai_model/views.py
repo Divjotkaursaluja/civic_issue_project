@@ -14,12 +14,7 @@ MODEL_PATH = os.path.join(BASE_DIR, "model.h5")
 
 print("📌 Loading AI Model from:", MODEL_PATH)
 
-try:
-    model = tf.keras.models.load_model(MODEL_PATH, compile=False)
-    print("✅ Model loaded successfully!")
-except Exception as e:
-    print("❌ ERROR loading model:", e)
-    model = None
+
 
 
 CLASS_LABELS = [
@@ -37,16 +32,23 @@ IMG_WIDTH = 224
 @csrf_exempt
 # ---------- Prediction API ----------
 def predict_issue(request):
-    if model is None:
+    if request.method != "POST":
+        return JsonResponse({"error": "POST request required"}, status=405)
+
+   
+
+    try:
+        model = tf.keras.models.load_model(MODEL_PATH, compile=False)
+        print("✅ Model loaded successfully!")
+    except Exception as e:
+        print("❌ ERROR loading model:", e)
         return JsonResponse({
             "message": "Model not available"
         })
 
-    if request.method != "POST":
-        return JsonResponse({"error": "POST request required"}, status=405)
-
-    if model is None:
-        return JsonResponse({"error": "AI model not loaded"}, status=500)
+    # continue your prediction code
+    
+    
 
     uploaded_file = request.FILES.get("file")
     if not uploaded_file:
