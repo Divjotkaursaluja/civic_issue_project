@@ -37,6 +37,10 @@ IMG_WIDTH = 224
 @csrf_exempt
 # ---------- Prediction API ----------
 def predict_issue(request):
+    if model is None:
+        return JsonResponse({
+            "message": "Model not available"
+        })
 
     if request.method != "POST":
         return JsonResponse({"error": "POST request required"}, status=405)
