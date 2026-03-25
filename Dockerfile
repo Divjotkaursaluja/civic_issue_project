@@ -35,4 +35,4 @@ COPY . .
 EXPOSE 8000
 
 # Run server
-CMD ["sh", "-c", "python manage.py migrate && gunicorn --bind 0.0.0.0:8000 civicbackend.wsgi:application"]
+CMD ["sh", "-c", "cd civicbackend && python manage.py migrate && gunicorn --bind 0.0.0.0:8000 civic_backend.wsgi:application"]
