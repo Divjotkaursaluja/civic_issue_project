@@ -8,8 +8,6 @@ from math import sqrt
 from django.db.models import Q
 from django.db.models import Max
 from django.core.mail import send_mail
-
-from ai_model.predict import classify_image
 from django.contrib.auth.models import User
 import json
 
@@ -335,7 +333,9 @@ def vote_up_complaint(request, complaint_id):
 
 @csrf_exempt
 def predict_image(request):
+    
     print("/predict/ HIT - method:", request.method)
+    
 
     if request.method != "POST":
         return JsonResponse({"error": "POST required"}, status=405)
