@@ -102,7 +102,7 @@ def create_complaint(request):
         full_path = default_storage.path(file_path)
 
         # Classify the image using AI
-        predicted_class, confidence = classify_image(file);
+        predicted_class, confidence = classify_image(full_path);
 
         # Find the department based on predicted class
         department = None

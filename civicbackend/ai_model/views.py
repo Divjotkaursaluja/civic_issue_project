@@ -20,11 +20,19 @@ CLASS_LABELS = [
 ]
 
 # ---------- AI Function ----------
-def classify_image(uploaded_file):
+def classify_image(file_input):
     try:
-        uploaded_file.seek(0)  # 🔥 RESET FILE POINTER
+        from PIL import Image
+        import numpy as np
+        from tensorflow.keras.applications.mobilenet_v2 import preprocess_input
 
-        img = Image.open(uploaded_file).convert("RGB")  # ✅ FIX
+        # 🔥 HANDLE BOTH CASES (file OR path)
+        if isinstance(file_input, str):
+            img = Image.open(file_input)
+        else:
+            img = Image.open(file_input)
+
+        img = img.convert("RGB")   # ⚠️ IMPORTANT
         img = img.resize((224, 224))
 
         img = np.array(img)
@@ -34,7 +42,7 @@ def classify_image(uploaded_file):
         model = tf.keras.models.load_model(MODEL_PATH, compile=False)
 
         preds = model.predict(img)
-        print("DEBUG preds:", preds)
+        print("DEBUG preds:", preds)   # 🔥 ADD THIS
 
         preds = preds[0]
 
@@ -45,8 +53,7 @@ def classify_image(uploaded_file):
         return label, confidence
 
     except Exception as e:
-        import traceback
-        traceback.print_exc()
+        print("AI error:", e)
         return "unknown", 0.0
 
 
