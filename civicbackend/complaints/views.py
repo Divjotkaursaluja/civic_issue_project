@@ -99,12 +99,11 @@ def create_complaint(request):
 
     # ✅ No duplicate → proceed with AI classification
     try:
-        # Save the uploaded file
-        file_path = default_storage.save("complaint_images/" + file.name, file)
-        full_path = default_storage.path(file_path)
+        
 
         # Classify the image using AI
         predicted_class, confidence = classify_image(file)
+        file.seek(0)
 
         # Find the department based on predicted class
         department = None
