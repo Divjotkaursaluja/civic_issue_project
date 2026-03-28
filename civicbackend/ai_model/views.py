@@ -27,11 +27,11 @@ def classify_image(file_input):
         from tensorflow.keras.applications.mobilenet_v2 import preprocess_input
 
         # 🔥 HANDLE BOTH CASES (file OR path)
-        if isinstance(file_input, str):
-            img = Image.open(file_input)
-        else:
-            img = Image.open(file_input)
+        print("🔥 classify_image called")
+        if not isinstance(file_input, str):
+            file_input.seek(0)
 
+        img = Image.open(file_input)
         img = img.convert("RGB")   # ⚠️ IMPORTANT
         img = img.resize((224, 224))
 
