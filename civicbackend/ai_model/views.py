@@ -22,7 +22,11 @@ CLASS_LABELS = [
 # ---------- AI Function ----------
 def classify_image(uploaded_file):
     try:
-        img = Image.open(io.BytesIO(uploaded_file.read())).resize((224, 224))
+        uploaded_file.seek(0)  # 🔥 RESET FILE POINTER
+
+        img = Image.open(uploaded_file).convert("RGB")  # ✅ FIX
+        img = img.resize((224, 224))
+
         img = np.array(img)
         img = np.expand_dims(img, axis=0)
         img = preprocess_input(img)
@@ -30,6 +34,8 @@ def classify_image(uploaded_file):
         model = tf.keras.models.load_model(MODEL_PATH, compile=False)
 
         preds = model.predict(img)
+        print("DEBUG preds:", preds)
+
         preds = preds[0]
 
         index = np.argmax(preds)
@@ -39,7 +45,8 @@ def classify_image(uploaded_file):
         return label, confidence
 
     except Exception as e:
-        print("AI error:", e)
+        import traceback
+        traceback.print_exc()
         return "unknown", 0.0
 
 
