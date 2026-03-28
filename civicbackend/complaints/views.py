@@ -10,6 +10,7 @@ from django.db.models import Max
 from django.core.mail import send_mail
 from django.contrib.auth.models import User
 import json
+from ai_model.views import classify_image
 
 
 from .models import Complaint
@@ -101,7 +102,7 @@ def create_complaint(request):
         full_path = default_storage.path(file_path)
 
         # Classify the image using AI
-        predicted_class, confidence = classify_image(full_path)
+        predicted_class, confidence = classify_image(file);
 
         # Find the department based on predicted class
         department = None
