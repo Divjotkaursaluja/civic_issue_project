@@ -8,9 +8,10 @@ from math import sqrt
 from django.db.models import Q
 from django.db.models import Max
 from django.core.mail import send_mail
+from ai_model.views import classify_image
 from django.contrib.auth.models import User
 import json
-from ai_model.views import classify_image
+
 
 
 from .models import Complaint
@@ -53,6 +54,7 @@ def check_duplicate_complaint(request):
 
 @csrf_exempt
 def create_complaint(request):
+    print("🔥 Calling AI model...")
     if request.method != "POST":
         return JsonResponse({"error": "POST required"}, status=405)
 
@@ -102,7 +104,7 @@ def create_complaint(request):
         full_path = default_storage.path(file_path)
 
         # Classify the image using AI
-        predicted_class, confidence = classify_image(file);
+        predicted_class, confidence = classify_image(file)
 
         # Find the department based on predicted class
         department = None
