@@ -102,6 +102,7 @@ def create_complaint(request):
         
 
         # Classify the image using AI
+        print("🔥 About to call classify_image")
         predicted_class, confidence = classify_image(file)
         file.seek(0)
 

@@ -21,6 +21,7 @@ CLASS_LABELS = [
 
 # ---------- AI Function ----------
 def classify_image(file_input):
+    print("🔥🔥 NEW AI CODE RUNNING 🔥🔥")
     try:
         from PIL import Image
         import numpy as np
