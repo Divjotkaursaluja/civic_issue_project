@@ -9,7 +9,7 @@ if __name__ == "__main__":
     print(f"🔍 Loading model from: {MODEL_PATH}")
 
     try:
-        model = tf.keras.models.load_model(MODEL_PATH)
+        # model = tf.keras.models.load_model(MODEL_PATH)
         print("✅ Model loaded successfully!")
 
         if isinstance(model.input, list) and len(model.input) > 1:

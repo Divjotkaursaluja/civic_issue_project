@@ -1,11 +1,13 @@
 from django.http import JsonResponse
 from django.views.decorators.csrf import csrf_exempt
+import keras
 from tensorflow.keras.applications.mobilenet_v2 import preprocess_input
 import numpy as np
 import tensorflow as tf
 import os
 import io
 from PIL import Image
+
 
 # ---------- Model Path ----------
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
@@ -40,7 +42,7 @@ def classify_image(file_input):
         img = np.expand_dims(img, axis=0)
         img = preprocess_input(img)
 
-        model = tf.keras.models.load_model(MODEL_PATH, compile=False)
+        model = tf.keras.models.load_model(MODEL_PATH, compile=False, safe_mode=False)
 
         preds = model.predict(img)
         print("DEBUG preds:", preds)   # 🔥 ADD THIS
