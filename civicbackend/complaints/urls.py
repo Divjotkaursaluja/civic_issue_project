@@ -11,6 +11,8 @@ urlpatterns = [
 
     path("predict/", views.predict_image, name="predict"),
     path("counts/", views.complaint_counts),
+    path('test_log/', views.test_log),
+
 
     path(
         "<int:complaint_id>/update-status/",

@@ -1,0 +1,1670 @@
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+C:\Users\Divjot\Desktop\civic_project\civicbackend\complaints\views.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+Not Found: /test_log
+"GET /test_log HTTP/1.1" 404 2537
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 2546
+C:\Users\Divjot\Desktop\civic_project\civicbackend\complaints\urls.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+Internal Server Error: /api/complaints/test_log/
+Traceback (most recent call last):
+  File "C:\Users\Divjot\studybud\env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Divjot\studybud\env\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Divjot\Desktop\civic_project\civicbackend\complaints\views.py", line 385, in test_log
+    return HttpResponse("Log generated")
+           ^^^^^^^^^^^^
+NameError: name 'HttpResponse' is not defined. Did you mean: 'JsonResponse'?
+"GET /api/complaints/test_log/ HTTP/1.1" 500 69969
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 2546
+C:\Users\Divjot\Desktop\civic_project\civicbackend\complaints\views.py changed, reloading.
+Watching for file changes with StatReloader
+"GET /api/complaints/test_log/ HTTP/1.1" 200 13
+Not Found: /docs
+"GET /docs HTTP/1.1" 404 2525
+C:\Users\Divjot\Desktop\civic_project\civicbackend\complaints\views.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+Not Found: /logs
+"POST /logs HTTP/1.1" 404 2526
+"GET /api/complaints/test_log/ HTTP/1.1" 200 22
+C:\Users\Divjot\Desktop\civic_project\civicbackend\complaints\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Divjot\Desktop\civic_project\civicbackend\complaints\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Divjot\Desktop\civic_project\civicbackend\complaints\views.py changed, reloading.
+Watching for file changes with StatReloader
+"GET /api/complaints/test_log/ HTTP/1.1" 200 22
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+"GET /api/complaints/test_log/ HTTP/1.1" 200 22
+C:\Users\Divjot\Desktop\civic_project\civicbackend\complaints\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Divjot\Desktop\civic_project\civicbackend\complaints\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Divjot\Desktop\civic_project\civicbackend\complaints\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Divjot\Desktop\civic_project\civicbackend\complaints\views.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+"POST /api/complaints/predict/ HTTP/1.1" 200 65
+"POST /api/complaints/predict/ HTTP/1.1" 200 64
+"POST /api/complaints/predict/ HTTP/1.1" 200 65
+"OPTIONS /api/complaints/check-duplicate/ HTTP/1.1" 200 0
+"OPTIONS /api/complaints/check-duplicate/ HTTP/1.1" 200 0
+"OPTIONS /api/complaints/check-duplicate/ HTTP/1.1" 200 0
+Internal Server Error: /api/complaints/check-duplicate/
+Traceback (most recent call last):
+  File "C:\Users\Divjot\studybud\env\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Divjot\studybud\env\Lib\site-packages\django\db\backends\sqlite3\base.py", line 360, in execute
+    return super().execute(query, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+sqlite3.OperationalError: no such table: complaints_complaint
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Divjot\studybud\env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Divjot\studybud\env\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Divjot\studybud\env\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Divjot\Desktop\civic_project\civicbackend\complaints\views.py", line 37, in check_duplicate_complaint
+    for c in complaints:
+  File "C:\Users\Divjot\studybud\env\Lib\site-packages\django\db\models\query.py", line 384, in __iter__
+    self._fetch_all()
+  File "C:\Users\Divjot\studybud\env\Lib\site-packages\django\db\models\query.py", line 1949, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Divjot\studybud\env\Lib\site-packages\django\db\models\query.py", line 91, in __iter__
+    results = compiler.execute_sql(
+              ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Divjot\studybud\env\Lib\site-packages\django\db\models\sql\compiler.py", line 1623, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Users\Divjot\studybud\env\Lib\site-packages\django\db\backends\utils.py", line 122, in execute
+    return super().execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Divjot\studybud\env\Lib\site-packages\django\db\backends\utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Divjot\studybud\env\Lib\site-packages\django\db\backends\utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Divjot\studybud\env\Lib\site-packages\django\db\backends\utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+  File "C:\Users\Divjot\studybud\env\Lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\Divjot\studybud\env\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Divjot\studybud\env\Lib\site-packages\django\db\backends\sqlite3\base.py", line 360, in execute
+    return super().execute(query, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+django.db.utils.OperationalError: no such table: complaints_complaint
+Internal Server Error: /api/complaints/check-duplicate/
+Traceback (most recent call last):
+  File "C:\Users\Divjot\studybud\env\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Divjot\studybud\env\Lib\site-packages\django\db\backends\sqlite3\base.py", line 360, in execute
+    return super().execute(query, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+sqlite3.OperationalError: no such table: complaints_complaint
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Divjot\studybud\env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Divjot\studybud\env\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Divjot\studybud\env\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Divjot\Desktop\civic_project\civicbackend\complaints\views.py", line 37, in check_duplicate_complaint
+    for c in complaints:
+  File "C:\Users\Divjot\studybud\env\Lib\site-packages\django\db\models\query.py", line 384, in __iter__
+    self._fetch_all()
+  File "C:\Users\Divjot\studybud\env\Lib\site-packages\django\db\models\query.py", line 1949, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Divjot\studybud\env\Lib\site-packages\django\db\models\query.py", line 91, in __iter__
+    results = compiler.execute_sql(
+              ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Divjot\studybud\env\Lib\site-packages\django\db\models\sql\compiler.py", line 1623, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Users\Divjot\studybud\env\Lib\site-packages\django\db\backends\utils.py", line 122, in execute
+    return super().execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Divjot\studybud\env\Lib\site-packages\django\db\backends\utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Divjot\studybud\env\Lib\site-packages\django\db\backends\utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Divjot\studybud\env\Lib\site-packages\django\db\backends\utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+  File "C:\Users\Divjot\studybud\env\Lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\Divjot\studybud\env\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Divjot\studybud\env\Lib\site-packages\django\db\backends\sqlite3\base.py", line 360, in execute
+    return super().execute(query, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+django.db.utils.OperationalError: no such table: complaints_complaint
+"POST /api/complaints/check-duplicate/ HTTP/1.1" 500 142460
+"POST /api/complaints/check-duplicate/ HTTP/1.1" 500 142515
+Internal Server Error: /api/complaints/check-duplicate/
+Traceback (most recent call last):
+  File "C:\Users\Divjot\studybud\env\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Divjot\studybud\env\Lib\site-packages\django\db\backends\sqlite3\base.py", line 360, in execute
+    return super().execute(query, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+sqlite3.OperationalError: no such table: complaints_complaint
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Divjot\studybud\env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Divjot\studybud\env\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Divjot\studybud\env\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Divjot\Desktop\civic_project\civicbackend\complaints\views.py", line 37, in check_duplicate_complaint
+    for c in complaints:
+  File "C:\Users\Divjot\studybud\env\Lib\site-packages\django\db\models\query.py", line 384, in __iter__
+    self._fetch_all()
+  File "C:\Users\Divjot\studybud\env\Lib\site-packages\django\db\models\query.py", line 1949, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Divjot\studybud\env\Lib\site-packages\django\db\models\query.py", line 91, in __iter__
+    results = compiler.execute_sql(
+              ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Divjot\studybud\env\Lib\site-packages\django\db\models\sql\compiler.py", line 1623, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Users\Divjot\studybud\env\Lib\site-packages\django\db\backends\utils.py", line 122, in execute
+    return super().execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Divjot\studybud\env\Lib\site-packages\django\db\backends\utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Divjot\studybud\env\Lib\site-packages\django\db\backends\utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Divjot\studybud\env\Lib\site-packages\django\db\backends\utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+  File "C:\Users\Divjot\studybud\env\Lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\Divjot\studybud\env\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Divjot\studybud\env\Lib\site-packages\django\db\backends\sqlite3\base.py", line 360, in execute
+    return super().execute(query, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+django.db.utils.OperationalError: no such table: complaints_complaint
+"POST /api/complaints/check-duplicate/ HTTP/1.1" 500 142460
+"POST /api/complaints/predict/ HTTP/1.1" 200 65
+Internal Server Error: /api/complaints/check-duplicate/
+Traceback (most recent call last):
+  File "C:\Users\Divjot\studybud\env\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Divjot\studybud\env\Lib\site-packages\django\db\backends\sqlite3\base.py", line 360, in execute
+    return super().execute(query, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+sqlite3.OperationalError: no such table: complaints_complaint
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Divjot\studybud\env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Divjot\studybud\env\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Divjot\studybud\env\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Divjot\Desktop\civic_project\civicbackend\complaints\views.py", line 37, in check_duplicate_complaint
+    for c in complaints:
+  File "C:\Users\Divjot\studybud\env\Lib\site-packages\django\db\models\query.py", line 384, in __iter__
+    self._fetch_all()
+  File "C:\Users\Divjot\studybud\env\Lib\site-packages\django\db\models\query.py", line 1949, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Divjot\studybud\env\Lib\site-packages\django\db\models\query.py", line 91, in __iter__
+    results = compiler.execute_sql(
+              ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Divjot\studybud\env\Lib\site-packages\django\db\models\sql\compiler.py", line 1623, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Users\Divjot\studybud\env\Lib\site-packages\django\db\backends\utils.py", line 122, in execute
+    return super().execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Divjot\studybud\env\Lib\site-packages\django\db\backends\utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Divjot\studybud\env\Lib\site-packages\django\db\backends\utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Divjot\studybud\env\Lib\site-packages\django\db\backends\utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+  File "C:\Users\Divjot\studybud\env\Lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\Divjot\studybud\env\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Divjot\studybud\env\Lib\site-packages\django\db\backends\sqlite3\base.py", line 360, in execute
+    return super().execute(query, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+django.db.utils.OperationalError: no such table: complaints_complaint
+"POST /api/complaints/check-duplicate/ HTTP/1.1" 500 142460
+"POST /api/complaints/predict/ HTTP/1.1" 200 65
+Internal Server Error: /api/complaints/check-duplicate/
+Traceback (most recent call last):
+  File "C:\Users\Divjot\studybud\env\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Divjot\studybud\env\Lib\site-packages\django\db\backends\sqlite3\base.py", line 360, in execute
+    return super().execute(query, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+sqlite3.OperationalError: no such table: complaints_complaint
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Divjot\studybud\env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Divjot\studybud\env\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Divjot\studybud\env\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Divjot\Desktop\civic_project\civicbackend\complaints\views.py", line 37, in check_duplicate_complaint
+    for c in complaints:
+  File "C:\Users\Divjot\studybud\env\Lib\site-packages\django\db\models\query.py", line 384, in __iter__
+    self._fetch_all()
+  File "C:\Users\Divjot\studybud\env\Lib\site-packages\django\db\models\query.py", line 1949, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Divjot\studybud\env\Lib\site-packages\django\db\models\query.py", line 91, in __iter__
+    results = compiler.execute_sql(
+              ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Divjot\studybud\env\Lib\site-packages\django\db\models\sql\compiler.py", line 1623, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Users\Divjot\studybud\env\Lib\site-packages\django\db\backends\utils.py", line 122, in execute
+    return super().execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Divjot\studybud\env\Lib\site-packages\django\db\backends\utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Divjot\studybud\env\Lib\site-packages\django\db\backends\utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Divjot\studybud\env\Lib\site-packages\django\db\backends\utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+  File "C:\Users\Divjot\studybud\env\Lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\Divjot\studybud\env\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Divjot\studybud\env\Lib\site-packages\django\db\backends\sqlite3\base.py", line 360, in execute
+    return super().execute(query, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+django.db.utils.OperationalError: no such table: complaints_complaint
+"POST /api/complaints/check-duplicate/ HTTP/1.1" 500 142460
+"POST /api/complaints/predict/ HTTP/1.1" 200 66
+Internal Server Error: /api/complaints/check-duplicate/
+Traceback (most recent call last):
+  File "C:\Users\Divjot\studybud\env\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Divjot\studybud\env\Lib\site-packages\django\db\backends\sqlite3\base.py", line 360, in execute
+    return super().execute(query, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+sqlite3.OperationalError: no such table: complaints_complaint
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Divjot\studybud\env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Divjot\studybud\env\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Divjot\studybud\env\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Divjot\Desktop\civic_project\civicbackend\complaints\views.py", line 37, in check_duplicate_complaint
+    for c in complaints:
+  File "C:\Users\Divjot\studybud\env\Lib\site-packages\django\db\models\query.py", line 384, in __iter__
+    self._fetch_all()
+  File "C:\Users\Divjot\studybud\env\Lib\site-packages\django\db\models\query.py", line 1949, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Divjot\studybud\env\Lib\site-packages\django\db\models\query.py", line 91, in __iter__
+    results = compiler.execute_sql(
+              ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Divjot\studybud\env\Lib\site-packages\django\db\models\sql\compiler.py", line 1623, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Users\Divjot\studybud\env\Lib\site-packages\django\db\backends\utils.py", line 122, in execute
+    return super().execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Divjot\studybud\env\Lib\site-packages\django\db\backends\utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Divjot\studybud\env\Lib\site-packages\django\db\backends\utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Divjot\studybud\env\Lib\site-packages\django\db\backends\utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+  File "C:\Users\Divjot\studybud\env\Lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\Divjot\studybud\env\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Divjot\studybud\env\Lib\site-packages\django\db\backends\sqlite3\base.py", line 360, in execute
+    return super().execute(query, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+django.db.utils.OperationalError: no such table: complaints_complaint
+"POST /api/complaints/check-duplicate/ HTTP/1.1" 500 142460
+"POST /api/complaints/predict/ HTTP/1.1" 200 68
+Internal Server Error: /api/complaints/check-duplicate/
+Traceback (most recent call last):
+  File "C:\Users\Divjot\studybud\env\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Divjot\studybud\env\Lib\site-packages\django\db\backends\sqlite3\base.py", line 360, in execute
+    return super().execute(query, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+sqlite3.OperationalError: no such table: complaints_complaint
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Divjot\studybud\env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Divjot\studybud\env\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Divjot\studybud\env\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Divjot\Desktop\civic_project\civicbackend\complaints\views.py", line 37, in check_duplicate_complaint
+    for c in complaints:
+  File "C:\Users\Divjot\studybud\env\Lib\site-packages\django\db\models\query.py", line 384, in __iter__
+    self._fetch_all()
+  File "C:\Users\Divjot\studybud\env\Lib\site-packages\django\db\models\query.py", line 1949, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Divjot\studybud\env\Lib\site-packages\django\db\models\query.py", line 91, in __iter__
+    results = compiler.execute_sql(
+              ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Divjot\studybud\env\Lib\site-packages\django\db\models\sql\compiler.py", line 1623, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Users\Divjot\studybud\env\Lib\site-packages\django\db\backends\utils.py", line 122, in execute
+    return super().execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Divjot\studybud\env\Lib\site-packages\django\db\backends\utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Divjot\studybud\env\Lib\site-packages\django\db\backends\utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Divjot\studybud\env\Lib\site-packages\django\db\backends\utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+  File "C:\Users\Divjot\studybud\env\Lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\Divjot\studybud\env\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Divjot\studybud\env\Lib\site-packages\django\db\backends\sqlite3\base.py", line 360, in execute
+    return super().execute(query, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+django.db.utils.OperationalError: no such table: complaints_complaint
+"POST /api/complaints/check-duplicate/ HTTP/1.1" 500 142638
+"POST /api/complaints/predict/ HTTP/1.1" 200 68
+Internal Server Error: /api/complaints/create/
+Traceback (most recent call last):
+  File "C:\Users\Divjot\studybud\env\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Divjot\studybud\env\Lib\site-packages\django\db\backends\sqlite3\base.py", line 360, in execute
+    return super().execute(query, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+sqlite3.OperationalError: no such table: complaints_complaint
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Divjot\studybud\env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Divjot\studybud\env\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Divjot\studybud\env\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Divjot\Desktop\civic_project\civicbackend\complaints\views.py", line 94, in create_complaint
+    for c in existing_complaints:
+  File "C:\Users\Divjot\studybud\env\Lib\site-packages\django\db\models\query.py", line 384, in __iter__
+    self._fetch_all()
+  File "C:\Users\Divjot\studybud\env\Lib\site-packages\django\db\models\query.py", line 1949, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Divjot\studybud\env\Lib\site-packages\django\db\models\query.py", line 91, in __iter__
+    results = compiler.execute_sql(
+              ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Divjot\studybud\env\Lib\site-packages\django\db\models\sql\compiler.py", line 1623, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Users\Divjot\studybud\env\Lib\site-packages\django\db\backends\utils.py", line 122, in execute
+    return super().execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Divjot\studybud\env\Lib\site-packages\django\db\backends\utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Divjot\studybud\env\Lib\site-packages\django\db\backends\utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Divjot\studybud\env\Lib\site-packages\django\db\backends\utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+  File "C:\Users\Divjot\studybud\env\Lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\Divjot\studybud\env\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Divjot\studybud\env\Lib\site-packages\django\db\backends\sqlite3\base.py", line 360, in execute
+    return super().execute(query, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+django.db.utils.OperationalError: no such table: complaints_complaint
+"POST /api/complaints/create/ HTTP/1.1" 500 145834
+C:\Users\Divjot\Desktop\civic_project\civicbackend\civic_backend\settings.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Divjot\Desktop\civic_project\civicbackend\civic_backend\settings.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+"POST /api/complaints/predict/ HTTP/1.1" 200 65
+"POST /api/complaints/predict/ HTTP/1.1" 200 65
+"POST /api/complaints/predict/ HTTP/1.1" 200 65
+"POST /api/complaints/predict/ HTTP/1.1" 200 64
+"POST /api/complaints/predict/ HTTP/1.1" 200 65
+"POST /api/complaints/predict/ HTTP/1.1" 200 64
+"POST /api/complaints/predict/ HTTP/1.1" 200 65
+"POST /api/complaints/predict/ HTTP/1.1" 200 65
+"POST /api/complaints/predict/ HTTP/1.1" 200 65
+"POST /api/complaints/predict/ HTTP/1.1" 200 65
+"POST /api/complaints/predict/ HTTP/1.1" 200 65
+"POST /api/complaints/predict/ HTTP/1.1" 200 65
+"POST /api/complaints/predict/ HTTP/1.1" 200 65
+"POST /api/complaints/predict/ HTTP/1.1" 200 65
+"POST /api/complaints/predict/ HTTP/1.1" 200 65
+"POST /api/complaints/predict/ HTTP/1.1" 200 65
+"POST /api/complaints/predict/ HTTP/1.1" 200 65
+"POST /api/complaints/predict/ HTTP/1.1" 200 65
+"POST /api/complaints/predict/ HTTP/1.1" 200 65
+"POST /api/complaints/check-duplicate/ HTTP/1.1" 200 155
+"POST /api/complaints/check-duplicate/ HTTP/1.1" 200 155
+"POST /api/complaints/check-duplicate/ HTTP/1.1" 200 155
+"POST /api/complaints/check-duplicate/ HTTP/1.1" 200 155
+"POST /api/complaints/check-duplicate/ HTTP/1.1" 200 155
+"POST /api/complaints/check-duplicate/ HTTP/1.1" 200 155
+"POST /api/complaints/check-duplicate/ HTTP/1.1" 200 155
+"POST /api/complaints/check-duplicate/ HTTP/1.1" 200 155
+"POST /api/complaints/check-duplicate/ HTTP/1.1" 200 155
+"POST /api/complaints/check-duplicate/ HTTP/1.1" 200 155
+"POST /api/complaints/check-duplicate/ HTTP/1.1" 200 155
+"GET /media/complaint_images/image_F64HKUu.jpg HTTP/1.1" 200 49710
+"POST /api/complaints/check-duplicate/ HTTP/1.1" 200 155
+"POST /api/complaints/check-duplicate/ HTTP/1.1" 200 155
+"POST /api/complaints/check-duplicate/ HTTP/1.1" 200 155
+"POST /api/complaints/check-duplicate/ HTTP/1.1" 200 155
+"POST /api/complaints/check-duplicate/ HTTP/1.1" 200 155
+"POST /api/complaints/check-duplicate/ HTTP/1.1" 200 155
+"POST /api/complaints/check-duplicate/ HTTP/1.1" 200 155
+"POST /api/complaints/predict/ HTTP/1.1" 200 65
+"POST /api/complaints/check-duplicate/ HTTP/1.1" 200 155
+"POST /api/complaints/check-duplicate/ HTTP/1.1" 200 155
+"POST /api/complaints/predict/ HTTP/1.1" 200 65
+"POST /api/complaints/check-duplicate/ HTTP/1.1" 200 155
+"POST /api/complaints/predict/ HTTP/1.1" 200 65
+"POST /api/complaints/check-duplicate/ HTTP/1.1" 200 155
+"POST /api/complaints/predict/ HTTP/1.1" 200 65
+"POST /api/complaints/check-duplicate/ HTTP/1.1" 200 155
+"POST /api/complaints/predict/ HTTP/1.1" 200 64
+"POST /api/complaints/check-duplicate/ HTTP/1.1" 200 155
+"POST /api/complaints/predict/ HTTP/1.1" 200 65
+Internal Server Error: /api/complaints/create/
+"POST /api/complaints/create/ HTTP/1.1" 500 72
+"POST /api/complaints/16/vote-up/ HTTP/1.1" 200 37
+Watching for file changes with StatReloader
+CODEx dashboard pipeline test ERROR from Civic Issue System
+CODEx dashboard pipeline test WARNING from Civic Issue System
+Watching for file changes with StatReloader
+Not Found: /api/logs
+"GET /api/logs?limit=100 HTTP/1.1" 404 2547
+Not Found: /logs
+"GET /logs?limit=100 HTTP/1.1" 404 2535
+Not Found: /api/logs
+"GET /api/logs?limit=100 HTTP/1.1" 404 2547
+Not Found: /logs
+"GET /logs?limit=100 HTTP/1.1" 404 2535
+Not Found: /api/logs
+"GET /api/logs?limit=100 HTTP/1.1" 404 2547
+Not Found: /logs
+"GET /logs?limit=100 HTTP/1.1" 404 2535
+Not Found: /api/logs
+"GET /api/logs?limit=100 HTTP/1.1" 404 2547
+Not Found: /logs
+"GET /logs?limit=100 HTTP/1.1" 404 2535
+Not Found: /api/logs
+"GET /api/logs HTTP/1.1" 404 2537
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 2546
+Not Found: /api/logs
+"GET /api/logs?limit=100 HTTP/1.1" 404 2547
+Not Found: /logs
+"GET /logs?limit=100 HTTP/1.1" 404 2535
+Not Found: /api/logs
+"GET /api/logs?limit=100 HTTP/1.1" 404 2547
+Not Found: /logs
+"GET /logs?limit=100 HTTP/1.1" 404 2535
+Not Found: /api/logs
+"GET /api/logs?limit=100 HTTP/1.1" 404 2547
+Not Found: /logs
+"GET /logs?limit=100 HTTP/1.1" 404 2535
+Not Found: /api/logs
+"GET /api/logs?limit=100 HTTP/1.1" 404 2547
+Not Found: /logs
+"GET /logs?limit=100 HTTP/1.1" 404 2535
+Not Found: /api/logs
+"GET /api/logs?limit=100 HTTP/1.1" 404 2547
+Not Found: /logs
+"GET /logs?limit=100 HTTP/1.1" 404 2535
+Not Found: /api/logs
+"GET /api/logs?limit=100 HTTP/1.1" 404 2547
+Not Found: /logs
+"GET /logs?limit=100 HTTP/1.1" 404 2535
+Not Found: /api/logs
+"GET /api/logs?limit=100 HTTP/1.1" 404 2547
+Not Found: /logs
+"GET /logs?limit=100 HTTP/1.1" 404 2535
+Not Found: /api/logs
+"GET /api/logs?limit=100 HTTP/1.1" 404 2547
+Not Found: /logs
+"GET /logs?limit=100 HTTP/1.1" 404 2535
+Not Found: /api/logs
+"GET /api/logs?limit=100 HTTP/1.1" 404 2547
+Not Found: /logs
+"GET /logs?limit=100 HTTP/1.1" 404 2535
+Not Found: /api/logs
+"GET /api/logs?limit=100 HTTP/1.1" 404 2547
+Not Found: /logs
+"GET /logs?limit=100 HTTP/1.1" 404 2535
+Not Found: /api/logs
+"GET /api/logs?limit=100 HTTP/1.1" 404 2547
+Not Found: /logs
+"GET /logs?limit=100 HTTP/1.1" 404 2535
+Not Found: /api/logs
+"GET /api/logs?limit=100 HTTP/1.1" 404 2547
+Not Found: /logs
+"GET /logs?limit=100 HTTP/1.1" 404 2535
+Not Found: /api/logs
+"GET /api/logs?limit=100 HTTP/1.1" 404 2547
+Not Found: /logs
+"GET /logs?limit=100 HTTP/1.1" 404 2535
+Not Found: /api/logs
+"GET /api/logs?limit=100 HTTP/1.1" 404 2547
+Not Found: /logs
+"GET /logs?limit=100 HTTP/1.1" 404 2535
+Not Found: /api/logs
+"GET /api/logs?limit=100 HTTP/1.1" 404 2547
+Not Found: /logs
+"GET /logs?limit=100 HTTP/1.1" 404 2535
+Not Found: /api/logs
+"GET /api/logs?limit=100 HTTP/1.1" 404 2547
+Not Found: /logs
+"GET /logs?limit=100 HTTP/1.1" 404 2535
+Not Found: /api/logs
+"GET /api/logs?limit=100 HTTP/1.1" 404 2547
+Not Found: /logs
+"GET /logs?limit=100 HTTP/1.1" 404 2535
+Not Found: /api/logs
+"GET /api/logs?limit=100 HTTP/1.1" 404 2547
+Not Found: /logs
+"GET /logs?limit=100 HTTP/1.1" 404 2535
+Not Found: /api/logs
+"GET /api/logs?limit=100 HTTP/1.1" 404 2547
+Not Found: /logs
+"GET /logs?limit=100 HTTP/1.1" 404 2535
+Not Found: /api/logs
+"GET /api/logs HTTP/1.1" 404 2537
+Not Found: /api/logs
+"GET /api/logs?limit=100 HTTP/1.1" 404 2547
+Not Found: /logs
+"GET /logs?limit=100 HTTP/1.1" 404 2535
+Not Found: /api/logs
+"GET /api/logs HTTP/1.1" 404 2537
+Not Found: /api/logs
+"GET /api/logs HTTP/1.1" 404 2537
+Not Found: /api/logs
+"GET /api/logs HTTP/1.1" 404 2537
+Not Found: /api/logs
+"GET /api/logs?limit=100 HTTP/1.1" 404 2547
+Not Found: /logs
+"GET /logs?limit=100 HTTP/1.1" 404 2535
+Not Found: /api/logs
+"GET /api/logs?limit=100 HTTP/1.1" 404 2547
+Not Found: /api/logs
+"GET /api/logs?limit=100 HTTP/1.1" 404 2547
+Not Found: /logs
+"GET /logs?limit=100 HTTP/1.1" 404 2535
+Not Found: /logs
+"GET /logs?limit=100 HTTP/1.1" 404 2535
+Not Found: /api/logs
+"GET /api/logs?limit=100 HTTP/1.1" 404 2547
+Not Found: /api/logs
+"GET /api/logs?limit=100 HTTP/1.1" 404 2547
+Not Found: /logs
+"GET /logs?limit=100 HTTP/1.1" 404 2535
+Not Found: /logs
+"GET /logs?limit=100 HTTP/1.1" 404 2535
+Not Found: /api/logs
+"GET /api/logs?limit=100 HTTP/1.1" 404 2547
+Not Found: /api/logs
+Not Found: /logs
+"GET /api/logs?limit=100 HTTP/1.1" 404 2547
+"GET /logs?limit=100 HTTP/1.1" 404 2535
+Not Found: /logs
+"GET /logs?limit=100 HTTP/1.1" 404 2535
+Not Found: /api/logs
+"GET /api/logs?limit=100 HTTP/1.1" 404 2547
+Not Found: /api/logs
+"GET /api/logs?limit=100 HTTP/1.1" 404 2547
+Not Found: /logs
+"GET /logs?limit=100 HTTP/1.1" 404 2535
+Not Found: /logs
+"GET /logs?limit=100 HTTP/1.1" 404 2535
+Not Found: /api/logs
+"GET /api/logs?limit=100 HTTP/1.1" 404 2547
+Not Found: /api/logs
+Not Found: /logs
+"GET /api/logs?limit=100 HTTP/1.1" 404 2547
+"GET /logs?limit=100 HTTP/1.1" 404 2535
+Not Found: /logs
+"GET /logs?limit=100 HTTP/1.1" 404 2535
+Not Found: /api/logs
+"GET /api/logs?limit=100 HTTP/1.1" 404 2547
+Not Found: /logs
+"GET /logs?limit=100 HTTP/1.1" 404 2535
+Not Found: /api/logs
+"GET /api/logs?limit=100 HTTP/1.1" 404 2547
+Not Found: /logs
+"GET /logs?limit=100 HTTP/1.1" 404 2535
+Not Found: /logs
+"GET /logs?limit=100 HTTP/1.1" 404 2535
+Not Found: /logs
+"GET /logs?limit=100 HTTP/1.1" 404 2535
+Not Found: /api/logs
+"GET /api/logs?limit=100 HTTP/1.1" 404 2547
+Not Found: /logs
+"GET /logs?limit=100 HTTP/1.1" 404 2535
+Not Found: /api/logs
+"GET /api/logs?limit=100 HTTP/1.1" 404 2547
+Not Found: /logs
+"GET /logs?limit=100 HTTP/1.1" 404 2535
+Not Found: /api/logs
+"GET /api/logs?limit=100 HTTP/1.1" 404 2547
+Not Found: /api/logs
+"GET /api/logs?limit=100 HTTP/1.1" 404 2547
+Not Found: /logs
+"GET /logs?limit=100 HTTP/1.1" 404 2535
+Not Found: /logs
+"GET /logs?limit=100 HTTP/1.1" 404 2535
+Not Found: /api/logs
+"GET /api/logs?limit=100 HTTP/1.1" 404 2547
+Not Found: /api/logs
+Not Found: /logs
+"GET /api/logs?limit=100 HTTP/1.1" 404 2547
+"GET /logs?limit=100 HTTP/1.1" 404 2535
+Not Found: /logs
+"GET /logs?limit=100 HTTP/1.1" 404 2535
+Not Found: /api/logs
+"GET /api/logs?limit=100 HTTP/1.1" 404 2547
+Not Found: /api/logs
+Not Found: /logs
+"GET /api/logs?limit=100 HTTP/1.1" 404 2547
+"GET /logs?limit=100 HTTP/1.1" 404 2535
+Not Found: /logs
+"GET /logs?limit=100 HTTP/1.1" 404 2535
+Not Found: /api/logs
+"GET /api/logs?limit=100 HTTP/1.1" 404 2547
+Not Found: /api/logs
+"GET /api/logs?limit=100 HTTP/1.1" 404 2547
+Not Found: /logs
+"GET /logs?limit=100 HTTP/1.1" 404 2535
+Not Found: /logs
+"GET /logs?limit=100 HTTP/1.1" 404 2535
+Not Found: /api/logs
+"GET /api/logs?limit=100 HTTP/1.1" 404 2547
+Not Found: /api/logs
+"GET /api/logs?limit=100 HTTP/1.1" 404 2547
+Not Found: /logs
+"GET /logs?limit=100 HTTP/1.1" 404 2535
+Not Found: /logs
+"GET /logs?limit=100 HTTP/1.1" 404 2535
+Not Found: /api/logs
+"GET /api/logs?limit=100 HTTP/1.1" 404 2547
+Not Found: /logs
+"GET /logs?limit=100 HTTP/1.1" 404 2535
+Not Found: /api/logs
+"GET /api/logs?limit=100 HTTP/1.1" 404 2547
+Not Found: /logs
+"GET /logs?limit=100 HTTP/1.1" 404 2535
+Not Found: /api/logs
+"GET /api/logs?limit=100 HTTP/1.1" 404 2547
+Not Found: /logs
+"GET /logs?limit=100 HTTP/1.1" 404 2535
+Not Found: /api/logs
+"GET /api/logs?limit=100 HTTP/1.1" 404 2547
+Not Found: /api/logs
+"GET /api/logs?limit=100 HTTP/1.1" 404 2547
+Not Found: /logs
+"GET /logs?limit=100 HTTP/1.1" 404 2535
+Not Found: /logs
+"GET /logs?limit=100 HTTP/1.1" 404 2535
+Not Found: /api/logs
+"GET /api/logs?limit=100 HTTP/1.1" 404 2547
+Not Found: /logs
+"GET /logs?limit=100 HTTP/1.1" 404 2535
+Not Found: /api/logs
+"GET /api/logs?limit=100 HTTP/1.1" 404 2547
+Not Found: /logs
+"GET /logs?limit=100 HTTP/1.1" 404 2535
+Not Found: /api/logs
+"GET /api/logs?limit=100 HTTP/1.1" 404 2547
+Not Found: /logs
+"GET /logs?limit=100 HTTP/1.1" 404 2535
+Not Found: /api/logs
+"GET /api/logs?limit=100 HTTP/1.1" 404 2547
+Not Found: /logs
+"GET /logs?limit=100 HTTP/1.1" 404 2535
+Not Found: /api/logs
+"GET /api/logs?limit=100 HTTP/1.1" 404 2547
+Not Found: /logs
+"GET /logs?limit=100 HTTP/1.1" 404 2535
+Not Found: /api/logs
+"GET /api/logs?limit=100 HTTP/1.1" 404 2547
+Not Found: /logs
+"GET /logs?limit=100 HTTP/1.1" 404 2535
+Not Found: /api/logs
+"GET /api/logs?limit=100 HTTP/1.1" 404 2547
+Not Found: /logs
+"GET /logs?limit=100 HTTP/1.1" 404 2535
+Not Found: /api/logs
+"GET /api/logs?limit=100 HTTP/1.1" 404 2547
+Not Found: /logs
+"GET /logs?limit=100 HTTP/1.1" 404 2535
+Not Found: /api/logs
+"GET /api/logs?limit=100 HTTP/1.1" 404 2547
+Not Found: /logs
+"GET /logs?limit=100 HTTP/1.1" 404 2535
+Not Found: /api/logs
+"GET /api/logs?limit=100 HTTP/1.1" 404 2547
+Not Found: /logs
+"GET /logs?limit=100 HTTP/1.1" 404 2535
+Not Found: /api/logs
+"GET /api/logs?limit=100 HTTP/1.1" 404 2547
+Not Found: /logs
+"GET /logs?limit=100 HTTP/1.1" 404 2535
+Not Found: /api/logs
+"GET /api/logs?limit=100 HTTP/1.1" 404 2547
+Not Found: /logs
+"GET /logs?limit=100 HTTP/1.1" 404 2535
+Not Found: /api/logs
+"GET /api/logs?limit=100 HTTP/1.1" 404 2547
+Not Found: /api/logs
+Not Found: /logs
+"GET /api/logs?limit=100 HTTP/1.1" 404 2547
+"GET /logs?limit=100 HTTP/1.1" 404 2535
+Not Found: /logs
+"GET /logs?limit=100 HTTP/1.1" 404 2535
+Not Found: /api/logs
+"GET /api/logs?limit=100 HTTP/1.1" 404 2547
+Not Found: /logs
+"GET /logs?limit=100 HTTP/1.1" 404 2535
+Not Found: /api/logs
+"GET /api/logs?limit=100 HTTP/1.1" 404 2547
+Not Found: /logs
+"GET /logs?limit=100 HTTP/1.1" 404 2535
+Not Found: /api/logs
+"GET /api/logs?limit=100 HTTP/1.1" 404 2547
+Not Found: /logs
+"GET /logs?limit=100 HTTP/1.1" 404 2535
+Not Found: /api/logs
+"GET /api/logs?limit=100 HTTP/1.1" 404 2547
+Not Found: /logs
+"GET /logs?limit=100 HTTP/1.1" 404 2535
+Not Found: /api/logs
+"GET /api/logs?limit=100 HTTP/1.1" 404 2547
+Not Found: /logs
+"GET /logs?limit=100 HTTP/1.1" 404 2535
+Not Found: /api/logs
+"GET /api/logs?limit=100 HTTP/1.1" 404 2547
+Not Found: /logs
+"GET /logs?limit=100 HTTP/1.1" 404 2535
+Not Found: /api/logs
+"GET /api/logs?limit=100 HTTP/1.1" 404 2547
+Not Found: /logs
+"GET /logs?limit=100 HTTP/1.1" 404 2535
+Not Found: /api/logs
+"GET /api/logs?limit=100 HTTP/1.1" 404 2547
+Not Found: /logs
+"GET /logs?limit=100 HTTP/1.1" 404 2535
+Not Found: /api/logs
+"GET /api/logs?limit=100 HTTP/1.1" 404 2547
+Not Found: /logs
+"GET /logs?limit=100 HTTP/1.1" 404 2535
+Not Found: /api/logs
+"GET /api/logs?limit=100 HTTP/1.1" 404 2547
+Not Found: /logs
+"GET /logs?limit=100 HTTP/1.1" 404 2535
+Not Found: /api/logs
+"GET /api/logs?limit=100 HTTP/1.1" 404 2547
+Not Found: /logs
+"GET /logs?limit=100 HTTP/1.1" 404 2535
+Not Found: /api/logs
+"GET /api/logs?limit=100 HTTP/1.1" 404 2547
+Not Found: /logs
+"GET /logs?limit=100 HTTP/1.1" 404 2535
+Not Found: /api/logs
+"GET /api/logs?limit=100 HTTP/1.1" 404 2547
+Not Found: /logs
+"GET /logs?limit=100 HTTP/1.1" 404 2535
+Not Found: /api/logs
+"GET /api/logs?limit=100 HTTP/1.1" 404 2547
+Not Found: /logs
+"GET /logs?limit=100 HTTP/1.1" 404 2535
+Not Found: /api/logs
+"GET /api/logs?limit=100 HTTP/1.1" 404 2547
+Not Found: /logs
+"GET /logs?limit=100 HTTP/1.1" 404 2535
+Not Found: /api/logs
+"GET /api/logs?limit=100 HTTP/1.1" 404 2547
+Not Found: /logs
+"GET /logs?limit=100 HTTP/1.1" 404 2535
+Not Found: /api/logs
+"GET /api/logs?limit=100 HTTP/1.1" 404 2547
+Not Found: /logs
+"GET /logs?limit=100 HTTP/1.1" 404 2535
+Not Found: /api/logs
+"GET /api/logs?limit=100 HTTP/1.1" 404 2547
+Not Found: /logs
+"GET /logs?limit=100 HTTP/1.1" 404 2535
+Not Found: /api/logs
+"GET /api/logs?limit=100 HTTP/1.1" 404 2547
+Not Found: /logs
+"GET /logs?limit=100 HTTP/1.1" 404 2535
+Not Found: /api/logs
+"GET /api/logs?limit=100 HTTP/1.1" 404 2547
+Not Found: /logs
+"GET /logs?limit=100 HTTP/1.1" 404 2535
+Not Found: /api/logs
+"GET /api/logs?limit=100 HTTP/1.1" 404 2547
+Not Found: /logs
+"GET /logs?limit=100 HTTP/1.1" 404 2535
+Not Found: /api/logs
+"GET /api/logs?limit=100 HTTP/1.1" 404 2547
+Not Found: /logs
+"GET /logs?limit=100 HTTP/1.1" 404 2535
+Not Found: /api/logs
+"GET /api/logs?limit=100 HTTP/1.1" 404 2547
+Not Found: /logs
+"GET /logs?limit=100 HTTP/1.1" 404 2535
+Not Found: /api/logs
+"GET /api/logs?limit=100 HTTP/1.1" 404 2547
+Not Found: /logs
+"GET /logs?limit=100 HTTP/1.1" 404 2535
+Not Found: /api/logs
+"GET /api/logs?limit=100 HTTP/1.1" 404 2547
+Not Found: /logs
+"GET /logs?limit=100 HTTP/1.1" 404 2535
+Not Found: /api/logs
+"GET /api/logs?limit=100 HTTP/1.1" 404 2547
+Not Found: /logs
+"GET /logs?limit=100 HTTP/1.1" 404 2535
+Not Found: /api/logs
+"GET /api/logs?limit=100 HTTP/1.1" 404 2547
+Not Found: /logs
+"GET /logs?limit=100 HTTP/1.1" 404 2535
+Not Found: /api/logs
+"GET /api/logs?limit=100 HTTP/1.1" 404 2547
+Not Found: /logs
+"GET /logs?limit=100 HTTP/1.1" 404 2535
+Not Found: /api/logs
+"GET /api/logs?limit=100 HTTP/1.1" 404 2547
+Not Found: /logs
+"GET /logs?limit=100 HTTP/1.1" 404 2535
+Not Found: /api/logs
+"GET /api/logs?limit=100 HTTP/1.1" 404 2547
+Not Found: /logs
+"GET /logs?limit=100 HTTP/1.1" 404 2535
+Not Found: /api/logs
+"GET /api/logs?limit=100 HTTP/1.1" 404 2547
+Not Found: /logs
+"GET /logs?limit=100 HTTP/1.1" 404 2535
+Not Found: /api/logs
+"GET /api/logs?limit=100 HTTP/1.1" 404 2547
+Not Found: /api/logs
+"GET /api/logs?limit=100 HTTP/1.1" 404 2547
+Not Found: /api/logs
+"GET /api/logs?limit=100 HTTP/1.1" 404 2547
+Not Found: /api/logs
+"GET /api/logs?limit=100 HTTP/1.1" 404 2547
+Not Found: /logs
+"GET /logs?limit=100 HTTP/1.1" 404 2535
+Not Found: /logs
+"GET /logs?limit=100 HTTP/1.1" 404 2535
+Not Found: /api/logs
+"GET /api/logs?limit=100 HTTP/1.1" 404 2547
+Not Found: /api/logs
+"GET /api/logs?limit=100 HTTP/1.1" 404 2547
+Not Found: /logs
+"GET /logs?limit=100 HTTP/1.1" 404 2535
+Not Found: /logs
+"GET /logs?limit=100 HTTP/1.1" 404 2535
+Not Found: /api/logs
+"GET /api/logs?limit=100 HTTP/1.1" 404 2547
+Not Found: /api/logs
+"GET /api/logs?limit=100 HTTP/1.1" 404 2547
+Not Found: /logs
+"GET /logs?limit=100 HTTP/1.1" 404 2535
+Not Found: /logs
+"GET /logs?limit=100 HTTP/1.1" 404 2535
+Not Found: /api/logs
+"GET /api/logs?limit=100 HTTP/1.1" 404 2547
+Not Found: /logs
+"GET /logs?limit=100 HTTP/1.1" 404 2535
+Not Found: /api/logs
+"GET /api/logs?limit=100 HTTP/1.1" 404 2547
+Not Found: /logs
+"GET /logs?limit=100 HTTP/1.1" 404 2535
+Not Found: /api/logs
+"GET /api/logs?limit=100 HTTP/1.1" 404 2547
+Not Found: /logs
+"GET /logs?limit=100 HTTP/1.1" 404 2535
+Not Found: /api/logs
+"GET /api/logs?limit=100 HTTP/1.1" 404 2547
+Not Found: /logs
+"GET /logs?limit=100 HTTP/1.1" 404 2535
+Not Found: /api/logs
+"GET /api/logs?limit=100 HTTP/1.1" 404 2547
+Not Found: /logs
+"GET /logs?limit=100 HTTP/1.1" 404 2535
+Not Found: /api/logs
+"GET /api/logs?limit=100 HTTP/1.1" 404 2547
+Not Found: /logs
+"GET /logs?limit=100 HTTP/1.1" 404 2535
+Not Found: /api/logs
+"GET /api/logs?limit=100 HTTP/1.1" 404 2547
+Not Found: /logs
+"GET /logs?limit=100 HTTP/1.1" 404 2535
+Not Found: /api/logs
+"GET /api/logs?limit=100 HTTP/1.1" 404 2547
+Not Found: /api/logs
+Not Found: /logs
+"GET /api/logs?limit=100 HTTP/1.1" 404 2547
+"GET /logs?limit=100 HTTP/1.1" 404 2535
+Not Found: /logs
+"GET /logs?limit=100 HTTP/1.1" 404 2535
+Not Found: /api/logs
+"GET /api/logs?limit=100 HTTP/1.1" 404 2547
+Not Found: /logs
+"GET /logs?limit=100 HTTP/1.1" 404 2535
+Not Found: /api/logs
+"GET /api/logs?limit=100 HTTP/1.1" 404 2547
+Not Found: /api/logs
+"GET /api/logs?limit=100 HTTP/1.1" 404 2547
+Not Found: /logs
+"GET /logs?limit=100 HTTP/1.1" 404 2535
+Not Found: /logs
+"GET /logs?limit=100 HTTP/1.1" 404 2535
+Not Found: /api/logs
+"GET /api/logs?limit=100 HTTP/1.1" 404 2547
+Not Found: /logs
+"GET /logs?limit=100 HTTP/1.1" 404 2535
+Not Found: /api/logs
+"GET /api/logs?limit=100 HTTP/1.1" 404 2547
+Not Found: /logs
+"GET /logs?limit=100 HTTP/1.1" 404 2535
+Not Found: /api/logs
+"GET /api/logs?limit=100 HTTP/1.1" 404 2547
+Not Found: /logs
+"GET /logs?limit=100 HTTP/1.1" 404 2535
+Not Found: /api/logs
+"GET /api/logs?limit=100 HTTP/1.1" 404 2547
+Not Found: /logs
+"GET /logs?limit=100 HTTP/1.1" 404 2535
+Not Found: /api/logs
+"GET /api/logs?limit=100 HTTP/1.1" 404 2547
+Not Found: /logs
+"GET /logs?limit=100 HTTP/1.1" 404 2535
+Not Found: /api/logs
+"GET /api/logs?limit=100 HTTP/1.1" 404 2547
+Not Found: /logs
+"GET /logs?limit=100 HTTP/1.1" 404 2535
+Not Found: /api/logs
+"GET /api/logs?limit=100 HTTP/1.1" 404 2547
+Not Found: /logs
+"GET /logs?limit=100 HTTP/1.1" 404 2535
+Not Found: /api/logs
+"GET /api/logs?limit=100 HTTP/1.1" 404 2547
+Not Found: /logs
+"GET /logs?limit=100 HTTP/1.1" 404 2535
+Not Found: /api/logs
+"GET /api/logs?limit=100 HTTP/1.1" 404 2547
+Not Found: /logs
+"GET /logs?limit=100 HTTP/1.1" 404 2535
+Not Found: /api/logs
+"GET /api/logs?limit=100 HTTP/1.1" 404 2547
+Not Found: /logs
+"GET /logs?limit=100 HTTP/1.1" 404 2535
+Not Found: /api/logs
+"GET /api/logs?limit=100 HTTP/1.1" 404 2547
+Not Found: /logs
+"GET /logs?limit=100 HTTP/1.1" 404 2535
+Not Found: /api/logs
+"GET /api/logs?limit=100 HTTP/1.1" 404 2547
+Not Found: /logs
+"GET /logs?limit=100 HTTP/1.1" 404 2535
+Not Found: /api/logs
+"GET /api/logs?limit=100 HTTP/1.1" 404 2547
+Not Found: /logs
+"GET /logs?limit=100 HTTP/1.1" 404 2535
+Not Found: /api/logs
+"GET /api/logs?limit=100 HTTP/1.1" 404 2547
+Not Found: /logs
+"GET /logs?limit=100 HTTP/1.1" 404 2535
+Not Found: /api/logs
+"GET /api/logs?limit=100 HTTP/1.1" 404 2547
+Not Found: /logs
+"GET /logs?limit=100 HTTP/1.1" 404 2535
+Not Found: /api/logs
+"GET /api/logs?limit=100 HTTP/1.1" 404 2547
+Not Found: /logs
+"GET /logs?limit=100 HTTP/1.1" 404 2535
+Not Found: /api/logs
+"GET /api/logs?limit=100 HTTP/1.1" 404 2547
+Not Found: /api/logs
+"GET /api/logs?limit=100 HTTP/1.1" 404 2547
+Not Found: /logs
+"GET /logs?limit=100 HTTP/1.1" 404 2535
+Not Found: /logs
+"GET /logs?limit=100 HTTP/1.1" 404 2535
+Not Found: /api/logs
+"GET /api/logs?limit=100 HTTP/1.1" 404 2547
+Not Found: /api/logs
+Not Found: /logs
+"GET /api/logs?limit=100 HTTP/1.1" 404 2547
+"GET /logs?limit=100 HTTP/1.1" 404 2535
+Not Found: /logs
+"GET /logs?limit=100 HTTP/1.1" 404 2535
+Not Found: /api/logs
+"GET /api/logs?limit=100 HTTP/1.1" 404 2547
+Not Found: /api/logs
+Not Found: /logs
+"GET /api/logs?limit=100 HTTP/1.1" 404 2547
+"GET /logs?limit=100 HTTP/1.1" 404 2535
+Not Found: /logs
+"GET /logs?limit=100 HTTP/1.1" 404 2535
+Not Found: /api/logs
+"GET /api/logs?limit=100 HTTP/1.1" 404 2547
+Not Found: /api/logs
+Not Found: /logs
+"GET /api/logs?limit=100 HTTP/1.1" 404 2547
+"GET /logs?limit=100 HTTP/1.1" 404 2535
+Not Found: /logs
+"GET /logs?limit=100 HTTP/1.1" 404 2535
+Not Found: /api/logs
+"GET /api/logs?limit=100 HTTP/1.1" 404 2547
+Not Found: /api/logs
+Not Found: /logs
+"GET /logs?limit=100 HTTP/1.1" 404 2535
+"GET /api/logs?limit=100 HTTP/1.1" 404 2547
+Not Found: /logs
+"GET /logs?limit=100 HTTP/1.1" 404 2535
+Not Found: /api/logs
+"GET /api/logs?limit=100 HTTP/1.1" 404 2547
+Not Found: /api/logs
+"GET /api/logs?limit=100 HTTP/1.1" 404 2547
+Not Found: /logs
+"GET /logs?limit=100 HTTP/1.1" 404 2535
+Not Found: /logs
+"GET /logs?limit=100 HTTP/1.1" 404 2535
+Not Found: /api/logs
+"GET /api/logs?limit=100 HTTP/1.1" 404 2547
+Not Found: /api/logs
+"GET /api/logs?limit=100 HTTP/1.1" 404 2547
+Not Found: /logs
+"GET /logs?limit=100 HTTP/1.1" 404 2535
+Not Found: /logs
+"GET /logs?limit=100 HTTP/1.1" 404 2535
+Not Found: /api/logs
+"GET /api/logs?limit=100 HTTP/1.1" 404 2547
+Not Found: /api/logs
+Not Found: /logs
+"GET /logs?limit=100 HTTP/1.1" 404 2535
+"GET /api/logs?limit=100 HTTP/1.1" 404 2547
+Not Found: /logs
+"GET /logs?limit=100 HTTP/1.1" 404 2535
+Not Found: /api/logs
+"GET /api/logs?limit=100 HTTP/1.1" 404 2547
+Not Found: /api/logs
+Not Found: /logs
+"GET /api/logs?limit=100 HTTP/1.1" 404 2547
+"GET /logs?limit=100 HTTP/1.1" 404 2535
+Not Found: /logs
+"GET /logs?limit=100 HTTP/1.1" 404 2535
+Not Found: /api/logs
+"GET /api/logs?limit=100 HTTP/1.1" 404 2547
+Not Found: /api/logs
+Not Found: /logs
+"GET /api/logs?limit=100 HTTP/1.1" 404 2547
+"GET /logs?limit=100 HTTP/1.1" 404 2535
+Not Found: /logs
+"GET /logs?limit=100 HTTP/1.1" 404 2535
+Not Found: /api/logs
+"GET /api/logs?limit=100 HTTP/1.1" 404 2547
+Not Found: /api/logs
+"GET /api/logs?limit=100 HTTP/1.1" 404 2547
+Not Found: /logs
+"GET /logs?limit=100 HTTP/1.1" 404 2535
+Not Found: /logs
+"GET /logs?limit=100 HTTP/1.1" 404 2535
+Not Found: /api/logs
+"GET /api/logs?limit=100 HTTP/1.1" 404 2547
+Not Found: /api/logs
+"GET /api/logs?limit=100 HTTP/1.1" 404 2547
+Not Found: /logs
+"GET /logs?limit=100 HTTP/1.1" 404 2535
+Not Found: /logs
+"GET /logs?limit=100 HTTP/1.1" 404 2535
+Not Found: /api/logs
+"GET /api/logs?limit=100 HTTP/1.1" 404 2547
+Not Found: /api/logs
+Not Found: /logs
+"GET /api/logs?limit=100 HTTP/1.1" 404 2547
+"GET /logs?limit=100 HTTP/1.1" 404 2535
+Not Found: /logs
+"GET /logs?limit=100 HTTP/1.1" 404 2535
+Not Found: /api/logs
+"GET /api/logs?limit=100 HTTP/1.1" 404 2547
+Not Found: /logs
+"GET /logs?limit=100 HTTP/1.1" 404 2535
+Not Found: /api/logs
+"GET /api/logs?limit=100 HTTP/1.1" 404 2547
+Not Found: /logs
+"GET /logs?limit=100 HTTP/1.1" 404 2535
+Not Found: /api/logs
+"GET /api/logs?limit=100 HTTP/1.1" 404 2547
+Not Found: /api/logs
+"GET /api/logs?limit=100 HTTP/1.1" 404 2547
+Not Found: /logs
+"GET /logs?limit=100 HTTP/1.1" 404 2535
+Not Found: /logs
+"GET /logs?limit=100 HTTP/1.1" 404 2535
+Not Found: /api/logs
+"GET /api/logs?limit=100 HTTP/1.1" 404 2547
+Not Found: /api/logs
+"GET /api/logs?limit=100 HTTP/1.1" 404 2547
+Not Found: /logs
+"GET /logs?limit=100 HTTP/1.1" 404 2535
+Not Found: /logs
+"GET /logs?limit=100 HTTP/1.1" 404 2535
+Not Found: /api/logs
+"GET /api/logs?limit=100 HTTP/1.1" 404 2547
+Not Found: /api/logs
+"GET /api/logs?limit=100 HTTP/1.1" 404 2547
+Not Found: /logs
+"GET /logs?limit=100 HTTP/1.1" 404 2535
+Not Found: /logs
+"GET /logs?limit=100 HTTP/1.1" 404 2535
+Not Found: /api/logs
+"GET /api/logs?limit=100 HTTP/1.1" 404 2547
+Not Found: /api/logs
+"GET /api/logs?limit=100 HTTP/1.1" 404 2547
+Not Found: /logs
+"GET /logs?limit=100 HTTP/1.1" 404 2535
+Not Found: /logs
+"GET /logs?limit=100 HTTP/1.1" 404 2535
+Not Found: /api/logs
+"GET /api/logs?limit=100 HTTP/1.1" 404 2547
+Not Found: /api/logs
+Not Found: /logs
+"GET /api/logs?limit=100 HTTP/1.1" 404 2547
+"GET /logs?limit=100 HTTP/1.1" 404 2535
+Not Found: /logs
+"GET /logs?limit=100 HTTP/1.1" 404 2535
+Not Found: /api/logs
+"GET /api/logs?limit=100 HTTP/1.1" 404 2547
+Not Found: /logs
+"GET /logs?limit=100 HTTP/1.1" 404 2535
+Not Found: /api/logs
+"GET /api/logs?limit=100 HTTP/1.1" 404 2547
+Not Found: /logs
+"GET /logs?limit=100 HTTP/1.1" 404 2535
+Not Found: /api/logs
+"GET /api/logs?limit=100 HTTP/1.1" 404 2547
+Not Found: /logs
+"GET /logs?limit=100 HTTP/1.1" 404 2535
+Not Found: /api/logs
+"GET /api/logs?limit=100 HTTP/1.1" 404 2547
+Not Found: /logs
+"GET /logs?limit=100 HTTP/1.1" 404 2535
+Not Found: /api/logs
+"GET /api/logs?limit=100 HTTP/1.1" 404 2547
+Not Found: /logs
+"GET /logs?limit=100 HTTP/1.1" 404 2535
+Not Found: /api/logs
+"GET /api/logs?limit=100 HTTP/1.1" 404 2547
+Not Found: /logs
+"GET /logs?limit=100 HTTP/1.1" 404 2535
+Not Found: /api/logs
+"GET /api/logs?limit=100 HTTP/1.1" 404 2547
+Not Found: /logs
+"GET /logs?limit=100 HTTP/1.1" 404 2535
+Not Found: /api/logs
+"GET /api/logs?limit=100 HTTP/1.1" 404 2547
+Not Found: /api/logs
+Not Found: /logs
+"GET /api/logs?limit=100 HTTP/1.1" 404 2547
+"GET /logs?limit=100 HTTP/1.1" 404 2535
+Not Found: /logs
+"GET /logs?limit=100 HTTP/1.1" 404 2535
+Not Found: /api/logs
+"GET /api/logs?limit=100 HTTP/1.1" 404 2547
+Not Found: /api/logs
+"GET /api/logs?limit=100 HTTP/1.1" 404 2547
+Not Found: /logs
+"GET /logs?limit=100 HTTP/1.1" 404 2535
+Not Found: /logs
+"GET /logs?limit=100 HTTP/1.1" 404 2535
+Not Found: /api/logs
+"GET /api/logs?limit=100 HTTP/1.1" 404 2547
+Not Found: /logs
+"GET /logs?limit=100 HTTP/1.1" 404 2535
+Not Found: /api/logs
+"GET /api/logs?limit=100 HTTP/1.1" 404 2547
+Not Found: /logs
+"GET /logs?limit=100 HTTP/1.1" 404 2535
+Not Found: /api/logs
+"GET /api/logs?limit=100 HTTP/1.1" 404 2547
+Not Found: /logs
+"GET /logs?limit=100 HTTP/1.1" 404 2535
+Not Found: /api/logs
+"GET /api/logs?limit=100 HTTP/1.1" 404 2547
+Not Found: /logs
+"GET /logs?limit=100 HTTP/1.1" 404 2535
+Not Found: /api/logs
+"GET /api/logs?limit=100 HTTP/1.1" 404 2547
+Not Found: /logs
+"GET /logs?limit=100 HTTP/1.1" 404 2535
+Not Found: /api/logs
+"GET /api/logs?limit=100 HTTP/1.1" 404 2547
+Not Found: /logs
+"GET /logs?limit=100 HTTP/1.1" 404 2535
+Not Found: /api/logs
+"GET /api/logs?limit=100 HTTP/1.1" 404 2547
+Not Found: /logs
+"GET /logs?limit=100 HTTP/1.1" 404 2535
+Not Found: /api/logs
+"GET /api/logs?limit=100 HTTP/1.1" 404 2547
+Not Found: /logs
+"GET /logs?limit=100 HTTP/1.1" 404 2535
+Not Found: /api/logs
+"GET /api/logs?limit=100 HTTP/1.1" 404 2547
+Not Found: /logs
+"GET /logs?limit=100 HTTP/1.1" 404 2535
+Not Found: /api/logs
+"GET /api/logs?limit=100 HTTP/1.1" 404 2547
+Not Found: /logs
+"GET /logs?limit=100 HTTP/1.1" 404 2535
+Not Found: /api/logs
+"GET /api/logs?limit=100 HTTP/1.1" 404 2547
+Not Found: /logs
+"GET /logs?limit=100 HTTP/1.1" 404 2535
+Not Found: /api/logs
+"GET /api/logs?limit=100 HTTP/1.1" 404 2547
+Not Found: /logs
+"GET /logs?limit=100 HTTP/1.1" 404 2535
+Not Found: /api/logs
+"GET /api/logs?limit=100 HTTP/1.1" 404 2547
+Not Found: /logs
+"GET /logs?limit=100 HTTP/1.1" 404 2535
+Not Found: /api/logs
+"GET /api/logs?limit=100 HTTP/1.1" 404 2547
+Not Found: /logs
+"GET /logs?limit=100 HTTP/1.1" 404 2535
+Not Found: /api/logs
+"GET /api/logs?limit=100 HTTP/1.1" 404 2547
+Not Found: /logs
+"GET /logs?limit=100 HTTP/1.1" 404 2535
+Not Found: /api/logs
+"GET /api/logs?limit=100 HTTP/1.1" 404 2547
+Not Found: /logs
+"GET /logs?limit=100 HTTP/1.1" 404 2535
+Not Found: /api/logs
+"GET /api/logs?limit=100 HTTP/1.1" 404 2547
+Not Found: /logs
+"GET /logs?limit=100 HTTP/1.1" 404 2535
+Not Found: /api/logs
+"GET /api/logs?limit=100 HTTP/1.1" 404 2547
+Not Found: /logs
+"GET /logs?limit=100 HTTP/1.1" 404 2535
+Not Found: /api/logs
+"GET /api/logs?limit=100 HTTP/1.1" 404 2547
+Not Found: /logs
+"GET /logs?limit=100 HTTP/1.1" 404 2535
+Not Found: /api/logs
+"GET /api/logs?limit=100 HTTP/1.1" 404 2547
+Not Found: /api/logs
+Not Found: /logs
+"GET /api/logs?limit=100 HTTP/1.1" 404 2547
+"GET /logs?limit=100 HTTP/1.1" 404 2535
+Not Found: /logs
+"GET /logs?limit=100 HTTP/1.1" 404 2535
+Not Found: /api/logs
+"GET /api/logs?limit=100 HTTP/1.1" 404 2547
+Not Found: /logs
+"GET /logs?limit=100 HTTP/1.1" 404 2535
+Not Found: /api/logs
+"GET /api/logs?limit=100 HTTP/1.1" 404 2547
+Not Found: /logs
+"GET /logs?limit=100 HTTP/1.1" 404 2535
+Not Found: /api/logs
+"GET /api/logs?limit=100 HTTP/1.1" 404 2547
+Not Found: /logs
+"GET /logs?limit=100 HTTP/1.1" 404 2535
+Not Found: /api/logs
+"GET /api/logs?limit=100 HTTP/1.1" 404 2547
+Not Found: /logs
+"GET /logs?limit=100 HTTP/1.1" 404 2535
+Not Found: /api/logs
+"GET /api/logs?limit=100 HTTP/1.1" 404 2547
+Not Found: /logs
+"GET /logs?limit=100 HTTP/1.1" 404 2535
+Not Found: /api/logs
+"GET /api/logs?limit=100 HTTP/1.1" 404 2547
+Not Found: /logs
+"GET /logs?limit=100 HTTP/1.1" 404 2535
+Not Found: /api/logs
+"GET /api/logs?limit=100 HTTP/1.1" 404 2547
+Not Found: /logs
+"GET /logs?limit=100 HTTP/1.1" 404 2535
+Not Found: /api/logs
+"GET /api/logs?limit=100 HTTP/1.1" 404 2547
+Not Found: /logs
+"GET /logs?limit=100 HTTP/1.1" 404 2535
+Not Found: /api/logs
+"GET /api/logs?limit=100 HTTP/1.1" 404 2547
+Not Found: /logs
+"GET /logs?limit=100 HTTP/1.1" 404 2535
+Not Found: /api/logs
+"GET /api/logs?limit=100 HTTP/1.1" 404 2547
+Not Found: /logs
+"GET /logs?limit=100 HTTP/1.1" 404 2535
+Not Found: /api/logs
+"GET /api/logs?limit=100 HTTP/1.1" 404 2547
+Not Found: /logs
+"GET /logs?limit=100 HTTP/1.1" 404 2535
+Not Found: /api/logs
+"GET /api/logs?limit=100 HTTP/1.1" 404 2547
+Not Found: /logs
+"GET /logs?limit=100 HTTP/1.1" 404 2535
+Not Found: /api/logs
+"GET /api/logs?limit=100 HTTP/1.1" 404 2547
+Not Found: /logs
+"GET /logs?limit=100 HTTP/1.1" 404 2535
+Not Found: /api/logs
+"GET /api/logs?limit=100 HTTP/1.1" 404 2547
+Not Found: /api/logs
+Not Found: /logs
+"GET /api/logs?limit=100 HTTP/1.1" 404 2547
+"GET /logs?limit=100 HTTP/1.1" 404 2535
+Not Found: /logs
+"GET /logs?limit=100 HTTP/1.1" 404 2535
+Not Found: /api/logs
+"GET /api/logs?limit=100 HTTP/1.1" 404 2547
+Not Found: /api/logs
+Not Found: /logs
+"GET /api/logs?limit=100 HTTP/1.1" 404 2547
+"GET /logs?limit=100 HTTP/1.1" 404 2535
+Not Found: /logs
+"GET /logs?limit=100 HTTP/1.1" 404 2535
+Not Found: /api/logs
+"GET /api/logs?limit=100 HTTP/1.1" 404 2547
+Not Found: /logs
+"GET /logs?limit=100 HTTP/1.1" 404 2535
+Not Found: /api/logs
+"GET /api/logs?limit=100 HTTP/1.1" 404 2547
+Not Found: /logs
+"GET /logs?limit=100 HTTP/1.1" 404 2535
+Not Found: /api/logs
+"GET /api/logs?limit=100 HTTP/1.1" 404 2547
+Not Found: /api/logs
+Not Found: /logs
+"GET /api/logs?limit=100 HTTP/1.1" 404 2547
+"GET /logs?limit=100 HTTP/1.1" 404 2535
+Not Found: /logs
+"GET /logs?limit=100 HTTP/1.1" 404 2535
+Not Found: /api/logs
+"GET /api/logs?limit=100 HTTP/1.1" 404 2547
+Not Found: /api/logs
+Not Found: /logs
+"GET /api/logs?limit=100 HTTP/1.1" 404 2547
+"GET /logs?limit=100 HTTP/1.1" 404 2535
+Not Found: /logs
+"GET /logs?limit=100 HTTP/1.1" 404 2535
+Not Found: /api/logs
+"GET /api/logs?limit=100 HTTP/1.1" 404 2547
+Not Found: /api/logs
+Not Found: /logs
+"GET /api/logs?limit=100 HTTP/1.1" 404 2547
+"GET /logs?limit=100 HTTP/1.1" 404 2535
+Not Found: /logs
+"GET /logs?limit=100 HTTP/1.1" 404 2535
+Not Found: /api/logs
+"GET /api/logs?limit=100 HTTP/1.1" 404 2547
+Not Found: /api/logs
+Not Found: /logs
+"GET /api/logs?limit=100 HTTP/1.1" 404 2547
+"GET /logs?limit=100 HTTP/1.1" 404 2535
+Not Found: /logs
+"GET /logs?limit=100 HTTP/1.1" 404 2535
+Not Found: /api/logs
+"GET /api/logs?limit=100 HTTP/1.1" 404 2547
+Not Found: /api/logs
+Not Found: /logs
+"GET /api/logs?limit=100 HTTP/1.1" 404 2547
+"GET /logs?limit=100 HTTP/1.1" 404 2535
+Not Found: /logs
+"GET /logs?limit=100 HTTP/1.1" 404 2535
+Not Found: /api/logs
+"GET /api/logs?limit=100 HTTP/1.1" 404 2547
+Not Found: /api/logs
+Not Found: /logs
+"GET /api/logs?limit=100 HTTP/1.1" 404 2547
+"GET /logs?limit=100 HTTP/1.1" 404 2535
+Not Found: /logs
+"GET /logs?limit=100 HTTP/1.1" 404 2535
+Not Found: /api/logs
+"GET /api/logs?limit=100 HTTP/1.1" 404 2547
+Not Found: /api/logs
+"GET /api/logs?limit=100 HTTP/1.1" 404 2547
+Not Found: /logs
+"GET /logs?limit=100 HTTP/1.1" 404 2535
+Not Found: /logs
+"GET /logs?limit=100 HTTP/1.1" 404 2535
+Not Found: /api/logs
+"GET /api/logs?limit=100 HTTP/1.1" 404 2547
+Not Found: /api/logs
+Not Found: /logs
+"GET /api/logs?limit=100 HTTP/1.1" 404 2547
+"GET /logs?limit=100 HTTP/1.1" 404 2535
+Not Found: /logs
+"GET /logs?limit=100 HTTP/1.1" 404 2535
+Not Found: /api/logs
+"GET /api/logs?limit=100 HTTP/1.1" 404 2547
+Not Found: /api/logs
+Not Found: /logs
+"GET /api/logs?limit=100 HTTP/1.1" 404 2547
+"GET /logs?limit=100 HTTP/1.1" 404 2535
+Not Found: /logs
+"GET /logs?limit=100 HTTP/1.1" 404 2535
+Not Found: /api/logs
+"GET /api/logs?limit=100 HTTP/1.1" 404 2547
+Not Found: /api/logs
+"GET /api/logs?limit=100 HTTP/1.1" 404 2547
+Not Found: /logs
+"GET /logs?limit=100 HTTP/1.1" 404 2535
+Not Found: /logs
+"GET /logs?limit=100 HTTP/1.1" 404 2535
+Not Found: /api/logs
+"GET /api/logs?limit=100 HTTP/1.1" 404 2547
+Not Found: /api/logs
+Not Found: /logs
+"GET /api/logs?limit=100 HTTP/1.1" 404 2547
+"GET /logs?limit=100 HTTP/1.1" 404 2535
+Not Found: /logs
+"GET /logs?limit=100 HTTP/1.1" 404 2535
+Not Found: /api/logs
+"GET /api/logs?limit=100 HTTP/1.1" 404 2547
+Not Found: /api/logs
+"GET /api/logs?limit=100 HTTP/1.1" 404 2547
+Not Found: /logs
+"GET /logs?limit=100 HTTP/1.1" 404 2535
+Not Found: /logs
+"GET /logs?limit=100 HTTP/1.1" 404 2535
+Not Found: /api/logs
+"GET /api/logs?limit=100 HTTP/1.1" 404 2547
+Not Found: /api/logs
+Not Found: /logs
+"GET /api/logs?limit=100 HTTP/1.1" 404 2547
+"GET /logs?limit=100 HTTP/1.1" 404 2535
+Not Found: /logs
+"GET /logs?limit=100 HTTP/1.1" 404 2535
+Not Found: /api/logs
+"GET /api/logs?limit=100 HTTP/1.1" 404 2547
+Not Found: /api/logs
+"GET /api/logs?limit=100 HTTP/1.1" 404 2547
+Not Found: /logs
+"GET /logs?limit=100 HTTP/1.1" 404 2535
+Not Found: /logs
+"GET /logs?limit=100 HTTP/1.1" 404 2535
+Not Found: /api/logs
+"GET /api/logs?limit=100 HTTP/1.1" 404 2547
+Not Found: /api/logs
+Not Found: /logs
+"GET /api/logs?limit=100 HTTP/1.1" 404 2547
+"GET /logs?limit=100 HTTP/1.1" 404 2535
+Not Found: /logs
+"GET /logs?limit=100 HTTP/1.1" 404 2535
+Not Found: /api/logs
+"GET /api/logs?limit=100 HTTP/1.1" 404 2547
+Not Found: /api/logs
+Not Found: /logs
+"GET /api/logs?limit=100 HTTP/1.1" 404 2547
+"GET /logs?limit=100 HTTP/1.1" 404 2535
+Not Found: /logs
+"GET /logs?limit=100 HTTP/1.1" 404 2535
+Not Found: /api/logs
+"GET /api/logs?limit=100 HTTP/1.1" 404 2547
+Not Found: /logs
+"GET /logs?limit=100 HTTP/1.1" 404 2535
+Not Found: /api/logs
+"GET /api/logs?limit=100 HTTP/1.1" 404 2547
+Not Found: /logs
+"GET /logs?limit=100 HTTP/1.1" 404 2535
+Not Found: /api/logs
+"GET /api/logs?limit=100 HTTP/1.1" 404 2547
+Not Found: /logs
+"GET /logs?limit=100 HTTP/1.1" 404 2535
+Not Found: /api/logs
+"GET /api/logs?limit=100 HTTP/1.1" 404 2547
+Not Found: /logs
+"GET /logs?limit=100 HTTP/1.1" 404 2535
+Not Found: /api/logs
+"GET /api/logs?limit=100 HTTP/1.1" 404 2547
+Not Found: /api/logs
+Not Found: /logs
+"GET /api/logs?limit=100 HTTP/1.1" 404 2547
+"GET /logs?limit=100 HTTP/1.1" 404 2535
+Not Found: /logs
+"GET /logs?limit=100 HTTP/1.1" 404 2535
+Not Found: /api/logs
+"GET /api/logs?limit=100 HTTP/1.1" 404 2547
+Not Found: /api/logs
+"GET /api/logs?limit=100 HTTP/1.1" 404 2547
+Not Found: /logs
+"GET /logs?limit=100 HTTP/1.1" 404 2535
+Not Found: /logs
+"GET /logs?limit=100 HTTP/1.1" 404 2535
+Not Found: /api/logs
+"GET /api/logs?limit=100 HTTP/1.1" 404 2547
+Not Found: /api/logs
+Not Found: /logs
+"GET /api/logs?limit=100 HTTP/1.1" 404 2547
+"GET /logs?limit=100 HTTP/1.1" 404 2535
+Not Found: /logs
+"GET /logs?limit=100 HTTP/1.1" 404 2535
+Not Found: /api/logs
+"GET /api/logs?limit=100 HTTP/1.1" 404 2547
+Not Found: /api/logs
+Not Found: /logs
+"GET /api/logs?limit=100 HTTP/1.1" 404 2547
+"GET /logs?limit=100 HTTP/1.1" 404 2535
+Not Found: /logs
+"GET /logs?limit=100 HTTP/1.1" 404 2535
+Not Found: /api/logs
+"GET /api/logs?limit=100 HTTP/1.1" 404 2547
+Not Found: /api/logs
+Not Found: /logs
+"GET /logs?limit=100 HTTP/1.1" 404 2535
+"GET /api/logs?limit=100 HTTP/1.1" 404 2547
+Not Found: /logs
+"GET /logs?limit=100 HTTP/1.1" 404 2535
+Watching for file changes with StatReloader
+Not Found: /docs
+"GET /docs HTTP/1.1" 404 2525
+Not Found: /docs
+"GET /docs HTTP/1.1" 404 2525
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 2546

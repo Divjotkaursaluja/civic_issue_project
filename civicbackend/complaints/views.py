@@ -10,7 +10,11 @@ from django.db.models import Max
 from django.core.mail import send_mail
 from ai_model.views import classify_image
 from django.contrib.auth.models import User
+from django.http import HttpResponse
 import json
+import logging
+logger = logging.getLogger(__name__)
+import requests
 
 
 
@@ -54,8 +58,10 @@ def check_duplicate_complaint(request):
 
 @csrf_exempt
 def create_complaint(request):
+    logger.info("Create complaint API called")
     print("🔥 Calling AI model...")
     if request.method != "POST":
+        logger.warning("Invalid request method used for complaint creation")
         return JsonResponse({"error": "POST required"}, status=405)
 
     title = request.POST.get("title")
@@ -65,10 +71,12 @@ def create_complaint(request):
     latitude = request.POST.get("latitude")
     longitude = request.POST.get("longitude")
     user_email = request.POST.get("user_email")
-    print("Received user_email:", user_email)
+    
+    logger.info(f"Received complaint request from user: {user_email}")
 
     file = request.FILES.get("file")
     if not file:
+        logger.error("Complaint creation failed: Image file missing")
         return JsonResponse({"error": "Image file required"}, status=400)
 
     # 🔍 Check for duplicate (only if coordinates provided)
@@ -77,6 +85,8 @@ def create_complaint(request):
         latitude = float(latitude)
         longitude = float(longitude)
 
+        logger.info("Checking for duplicate complaints")
+
         existing_complaints = Complaint.objects.filter(
             title__iexact=title
         ).exclude(status="Solved")
@@ -84,6 +94,7 @@ def create_complaint(request):
         for c in existing_complaints:
             if c.latitude and c.longitude:
                 if is_nearby(latitude, longitude, c.latitude, c.longitude):
+                    logger.warning("Duplicate complaint detected")
 
                     # ✅ ONLY return duplicate if user is NOT submitting form
                     if not request.POST.get("submit_anyway"):
@@ -102,31 +113,18 @@ def create_complaint(request):
         
 
         # Classify the image using AI
-        print("🔥 About to call classify_image")
+        logger.info("Sending image to AI model for classification")
         predicted_class, confidence = classify_image(file)
         file.seek(0)
 
         # Find the department based on predicted class
         department = None
-        if predicted_class and predicted_class != "unknown":
-            try:
-                department = Department.objects.get(name__iexact=predicted_class)
-            except Department.DoesNotExist:
-                pass  
-        title_map = {
-            "Overflowing garbage bins": "trash_bins",
-            "Broken streetlight": "streetlight",
-            "Potholes": "potholes",
-            "Water leakages": "water_leakage"
-        }
-
-        if not department:
-            mapped_slug = title_map.get(title)
-
-            if mapped_slug:
+        if predicted_class and predicted_class != " ":
                 try:
                     department = Department.objects.get(name__iexact=mapped_slug)
+                    logger.info(f"Mapped department: {department.name}")
                 except Department.DoesNotExist:
+                    logger.warning("No matching department found for predicted class")
                     department = None
 
         # Create the complaint with prediction
@@ -143,6 +141,7 @@ def create_complaint(request):
             user_email=user_email
            
         )
+        logger.info(f"Complaint created successfully with ID: {complaint.id}")
 
         return JsonResponse({
             "duplicate": False,
@@ -153,6 +152,7 @@ def create_complaint(request):
         })
       
     except Exception as e:
+        logger.error(f"AI classification failed: {str(e)}")
         return JsonResponse({
             "error": f"AI classification failed: {str(e)}"
         }, status=500)
@@ -392,3 +392,25 @@ def complaint_counts(request):
         }
 
     return JsonResponse(data)
+logger = logging.getLogger(__name__)
+
+def test_log(request):
+    message = "User triggered test log"
+
+    # 1. Save log in file
+    logger.info(message)
+
+    # 2. Send log to FastAPI
+    send_log("INFO", message)
+
+    return HttpResponse("Log generated and sent")
+def send_log(level, message):
+    try:
+        response = requests.post("http://127.0.0.1:8001/logs", json={
+            "level": level,
+            "message": message,
+            "service_name": "civic-system"
+        })
+        print("Sent log, response:", response.status_code)
+    except Exception as e:
+        print("Error sending log:", e)
