@@ -42,19 +42,29 @@ def classify_image(file_input):
         img = np.expand_dims(img, axis=0)
         img = preprocess_input(img)
 
-        model = tf.keras.models.load_model(
-    MODEL_PATH,
-    compile=False
-)
+        model = tf.keras.models.load_model(MODEL_PATH, compile=False)
+
+        print("✅ Model loaded inside classify_image")
+
         preds = model.predict(img)
-        print("DEBUG preds:", preds)   # 🔥 ADD THIS
-        print("Pred shape:", preds.shape)
+
+        print("🔥 RAW PREDS:", preds)
 
         preds = preds[0]
 
+        print("🔥 AFTER preds[0]:", preds)
+
         index = np.argmax(preds)
+
+        print("🔥 INDEX:", index)
+
         confidence = float(preds[index])
+
+        print("🔥 CONFIDENCE:", confidence)
+
         label = CLASS_LABELS[index]
+
+        print("🔥 LABEL:", label)
 
         return label, confidence
 
