@@ -119,14 +119,15 @@ def create_complaint(request):
 
         # Find the department based on predicted class
         department = None
-        if predicted_class and predicted_class != " ":
-                try:
-                    department = Department.objects.get(name__iexact=mapped_slug)
-                    logger.info(f"Mapped department: {department.name}")
-                except Department.DoesNotExist:
-                    logger.warning("No matching department found for predicted class")
-                    department = None
 
+        if predicted_class and predicted_class != "unknown":
+            try:
+                department = Department.objects.get(name__iexact=predicted_class)
+                logger.info(f"Mapped department: {department.name}")
+
+            except Department.DoesNotExist:
+                logger.warning("No matching department found for predicted class")
+                department = None
         # Create the complaint with prediction
         complaint = Complaint.objects.create(
             title=title,

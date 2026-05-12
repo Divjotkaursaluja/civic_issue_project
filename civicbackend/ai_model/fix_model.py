@@ -3,7 +3,7 @@ import os
 
 if __name__ == "__main__":
 
-    MODEL_PATH = os.path.join(os.path.dirname(__file__), "model.h5")
+    MODEL_PATH = os.path.join(os.path.dirname(__file__), "model.keras")
     FIXED_MODEL_PATH = os.path.join(os.path.dirname(__file__), "model_fixed.h5")
 
     print(f"🔍 Loading model from: {MODEL_PATH}")

@@ -11,7 +11,7 @@ from PIL import Image
 
 # ---------- Model Path ----------
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-MODEL_PATH = os.path.join(BASE_DIR, "model.h5")
+MODEL_PATH = os.path.join(BASE_DIR, "model.keras")
 
 CLASS_LABELS = [
     "potholes",
@@ -42,10 +42,13 @@ def classify_image(file_input):
         img = np.expand_dims(img, axis=0)
         img = preprocess_input(img)
 
-        model = tf.keras.models.load_model(MODEL_PATH, compile=False, safe_mode=False)
-
+        model = tf.keras.models.load_model(
+    MODEL_PATH,
+    compile=False
+)
         preds = model.predict(img)
         print("DEBUG preds:", preds)   # 🔥 ADD THIS
+        print("Pred shape:", preds.shape)
 
         preds = preds[0]
 
