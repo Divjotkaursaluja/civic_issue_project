@@ -1668,3 +1668,344 @@ Not Found: /docs
 "GET /docs HTTP/1.1" 404 2525
 Not Found: /favicon.ico
 "GET /favicon.ico HTTP/1.1" 404 2546
+Watching for file changes with StatReloader
+C:\Users\Divjot\Desktop\civic_project\civicbackend\civic_backend\settings.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+C:\Users\Divjot\Desktop\civic_project\civicbackend\civic_backend\urls.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+C:\Users\Divjot\Desktop\civic_project\civicbackend\civic_backend\urls.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+Not Found: /agent/heartbeat
+"POST /agent/heartbeat HTTP/1.1" 404 2559
+Not Found: /logs
+"POST /logs HTTP/1.1" 404 2526
+Watching for file changes with StatReloader
+Not Found: /api/alerts
+Not Found: /api/alerts/history
+Not Found: /api/notifications
+"GET /api/alerts HTTP/1.1" 404 2543
+Not Found: /api/logs
+Not Found: /api/trends
+"GET /api/alerts/history HTTP/1.1" 404 2567
+"GET /api/notifications HTTP/1.1" 404 2564
+"GET /api/logs HTTP/1.1" 404 2537
+"GET /api/trends HTTP/1.1" 404 2543
+Not Found: /logs
+"POST /logs HTTP/1.1" 404 2526
+Not Found: /logs
+"POST /logs HTTP/1.1" 404 2526
+Not Found: /api/alerts
+"GET /api/alerts HTTP/1.1" 404 2543
+Not Found: /api/trends
+Not Found: /api/alerts/history
+Not Found: /api/logs
+Not Found: /api/notifications
+"GET /api/alerts/history HTTP/1.1" 404 2567
+"GET /api/trends HTTP/1.1" 404 2543
+"GET /api/logs HTTP/1.1" 404 2537
+"GET /api/notifications HTTP/1.1" 404 2564
+Not Found: /logs
+"POST /logs HTTP/1.1" 404 2526
+Not Found: /logs
+"POST /logs HTTP/1.1" 404 2526
+Not Found: /agent/heartbeat
+"POST /agent/heartbeat HTTP/1.1" 404 2559
+Not Found: /logs
+"POST /logs HTTP/1.1" 404 2526
+Not Found: /logs
+"POST /logs HTTP/1.1" 404 2526
+Not Found: /logs
+"POST /logs HTTP/1.1" 404 2526
+Not Found: /logs
+"POST /logs HTTP/1.1" 404 2526
+"POST /api/complaints/predict/ HTTP/1.1" 200 69
+"OPTIONS /api/complaints/check-duplicate/ HTTP/1.1" 200 0
+"POST /api/complaints/check-duplicate/ HTTP/1.1" 200 20
+Not Found: /logs
+"POST /logs HTTP/1.1" 404 2526
+Not Found: /logs
+"POST /logs HTTP/1.1" 404 2526
+Not Found: /agent/heartbeat
+"POST /agent/heartbeat HTTP/1.1" 404 2559
+Not Found: /logs
+"POST /logs HTTP/1.1" 404 2526
+Not Found: /logs
+"POST /logs HTTP/1.1" 404 2526
+Not Found: /logs
+"POST /logs HTTP/1.1" 404 2526
+"POST /api/complaints/predict/ HTTP/1.1" 200 69
+"POST /api/complaints/create/ HTTP/1.1" 200 138
+Not Found: /logs
+"POST /logs HTTP/1.1" 404 2526
+Not Found: /logs
+"POST /logs HTTP/1.1" 404 2526
+Not Found: /logs
+"POST /logs HTTP/1.1" 404 2526
+Not Found: /logs
+"POST /logs HTTP/1.1" 404 2526
+Not Found: /agent/heartbeat
+"POST /agent/heartbeat HTTP/1.1" 404 2559
+Not Found: /logs
+"POST /logs HTTP/1.1" 404 2526
+Not Found: /logs
+"POST /logs HTTP/1.1" 404 2526
+Not Found: /logs
+"POST /logs HTTP/1.1" 404 2526
+Not Found: /logs
+"POST /logs HTTP/1.1" 404 2526
+Not Found: /logs
+"POST /logs HTTP/1.1" 404 2526
+Not Found: /logs
+"POST /logs HTTP/1.1" 404 2526
+Not Found: /agent/heartbeat
+"POST /agent/heartbeat HTTP/1.1" 404 2559
+Not Found: /logs
+"POST /logs HTTP/1.1" 404 2526
+Not Found: /logs
+"POST /logs HTTP/1.1" 404 2526
+Not Found: /logs
+"POST /logs HTTP/1.1" 404 2526
+Not Found: /logs
+"POST /logs HTTP/1.1" 404 2526
+Not Found: /logs
+"POST /logs HTTP/1.1" 404 2526
+Not Found: /logs
+"POST /logs HTTP/1.1" 404 2526
+Not Found: /agent/heartbeat
+"POST /agent/heartbeat HTTP/1.1" 404 2559
+Not Found: /logs
+"POST /logs HTTP/1.1" 404 2526
+Not Found: /logs
+"POST /logs HTTP/1.1" 404 2526
+Not Found: /logs
+"POST /logs HTTP/1.1" 404 2526
+Not Found: /logs
+"POST /logs HTTP/1.1" 404 2526
+Not Found: /logs
+"POST /logs HTTP/1.1" 404 2526
+Not Found: /logs
+"POST /logs HTTP/1.1" 404 2526
+Not Found: /agent/heartbeat
+"POST /agent/heartbeat HTTP/1.1" 404 2559
+Not Found: /logs
+"POST /logs HTTP/1.1" 404 2526
+Not Found: /logs
+"POST /logs HTTP/1.1" 404 2526
+Not Found: /logs
+"POST /logs HTTP/1.1" 404 2526
+Not Found: /logs
+"POST /logs HTTP/1.1" 404 2526
+Not Found: /logs
+"POST /logs HTTP/1.1" 404 2526
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+Not Found: /agent/heartbeat
+"POST /agent/heartbeat HTTP/1.1" 404 2559
+Not Found: /logs
+"POST /logs HTTP/1.1" 404 2526
+Not Found: /logs
+"POST /logs HTTP/1.1" 404 2526
+Not Found: /api/alerts
+Not Found: /api/trends
+"GET /api/alerts HTTP/1.1" 404 2543
+Not Found: /api/alerts/history
+"GET /api/trends HTTP/1.1" 404 2543
+"GET /api/alerts/history HTTP/1.1" 404 2567
+Not Found: /api/notifications
+Not Found: /api/logs
+"GET /api/notifications HTTP/1.1" 404 2564
+"GET /api/logs HTTP/1.1" 404 2537
+Not Found: /api/notifications
+Not Found: /api/alerts
+Not Found: /api/trends
+Not Found: /api/alerts/history
+"GET /api/notifications HTTP/1.1" 404 2564
+"GET /api/trends HTTP/1.1" 404 2543
+Not Found: /api/logs
+"GET /api/alerts HTTP/1.1" 404 2543
+"GET /api/alerts/history HTTP/1.1" 404 2567
+"GET /api/logs HTTP/1.1" 404 2537
+Not Found: /logs
+"POST /logs HTTP/1.1" 404 2526
+Not Found: /logs
+"POST /logs HTTP/1.1" 404 2526
+Not Found: /logs
+"POST /logs HTTP/1.1" 404 2526
+Not Found: /logs
+"POST /logs HTTP/1.1" 404 2526
+Not Found: /agent/heartbeat
+"POST /agent/heartbeat HTTP/1.1" 404 2559
+Not Found: /logs
+"POST /logs HTTP/1.1" 404 2526
+Not Found: /logs
+"POST /logs HTTP/1.1" 404 2526
+Not Found: /logs
+"POST /logs HTTP/1.1" 404 2526
+Not Found: /logs
+"POST /logs HTTP/1.1" 404 2526
+Not Found: /logs
+"POST /logs HTTP/1.1" 404 2526
+Not Found: /logs
+"POST /logs HTTP/1.1" 404 2526
+"POST /api/complaints/predict/ HTTP/1.1" 200 65
+"POST /api/complaints/predict/ HTTP/1.1" 200 65
+"OPTIONS /api/complaints/check-duplicate/ HTTP/1.1" 200 0
+"OPTIONS /api/complaints/check-duplicate/ HTTP/1.1" 200 0
+"POST /api/complaints/check-duplicate/ HTTP/1.1" 200 155
+"POST /api/complaints/check-duplicate/ HTTP/1.1" 200 155
+"GET /media/complaint_images/image_F64HKUu.jpg HTTP/1.1" 200 49710
+Not Found: /logs
+"POST /logs HTTP/1.1" 404 2526
+Not Found: /agent/heartbeat
+"POST /agent/heartbeat HTTP/1.1" 404 2559
+Not Found: /logs
+"POST /logs HTTP/1.1" 404 2526
+Not Found: /logs
+"POST /logs HTTP/1.1" 404 2526
+Not Found: /logs
+"POST /logs HTTP/1.1" 404 2526
+Not Found: /logs
+"POST /logs HTTP/1.1" 404 2526
+Not Found: /logs
+"POST /logs HTTP/1.1" 404 2526
+Not Found: /logs
+"POST /logs HTTP/1.1" 404 2526
+Not Found: /agent/heartbeat
+"POST /agent/heartbeat HTTP/1.1" 404 2559
+"POST /api/complaints/predict/ HTTP/1.1" 200 65
+Not Found: /logs
+"POST /logs HTTP/1.1" 404 2526
+"POST /api/complaints/create/ HTTP/1.1" 200 131
+Not Found: /logs
+"POST /logs HTTP/1.1" 404 2526
+Not Found: /logs
+"POST /logs HTTP/1.1" 404 2526
+Not Found: /logs
+"POST /logs HTTP/1.1" 404 2526
+Not Found: /logs
+"POST /logs HTTP/1.1" 404 2526
+Not Found: /logs
+"POST /logs HTTP/1.1" 404 2526
+Not Found: /agent/heartbeat
+"POST /agent/heartbeat HTTP/1.1" 404 2559
+Not Found: /logs
+"POST /logs HTTP/1.1" 404 2526
+Not Found: /logs
+"POST /logs HTTP/1.1" 404 2526
+Not Found: /logs
+"POST /logs HTTP/1.1" 404 2526
+Not Found: /logs
+"POST /logs HTTP/1.1" 404 2526
+Not Found: /logs
+"POST /logs HTTP/1.1" 404 2526
+Not Found: /logs
+"POST /logs HTTP/1.1" 404 2526
+Not Found: /agent/heartbeat
+"POST /agent/heartbeat HTTP/1.1" 404 2559
+Not Found: /logs
+"POST /logs HTTP/1.1" 404 2526
+Not Found: /logs
+"POST /logs HTTP/1.1" 404 2526
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+Not Found: /agent/heartbeat
+"POST /agent/heartbeat HTTP/1.1" 404 2559
+Not Found: /logs
+"POST /logs HTTP/1.1" 404 2526
+Not Found: /logs
+"POST /logs HTTP/1.1" 404 2526
+Not Found: /logs
+"POST /logs HTTP/1.1" 404 2526
+Not Found: /logs
+"POST /logs HTTP/1.1" 404 2526
+Not Found: /logs
+"POST /logs HTTP/1.1" 404 2526
+Not Found: /logs
+"POST /logs HTTP/1.1" 404 2526
+Not Found: /logs
+"POST /logs HTTP/1.1" 404 2526
+Not Found: /agent/heartbeat
+"POST /agent/heartbeat HTTP/1.1" 404 2559
+Not Found: /logs
+"POST /logs HTTP/1.1" 404 2526
+Not Found: /logs
+"POST /logs HTTP/1.1" 404 2526
+Not Found: /logs
+"POST /logs HTTP/1.1" 404 2526
+Not Found: /logs
+"POST /logs HTTP/1.1" 404 2526
+Not Found: /logs
+"POST /logs HTTP/1.1" 404 2526
+"POST /api/complaints/predict/ HTTP/1.1" 200 65
+"OPTIONS /api/complaints/check-duplicate/ HTTP/1.1" 200 0
+"POST /api/complaints/check-duplicate/ HTTP/1.1" 200 152
+"GET /media/complaint_images/image_7CgBxWj.jpg HTTP/1.1" 200 39186
+Not Found: /logs
+"POST /logs HTTP/1.1" 404 2526
+Not Found: /agent/heartbeat
+"POST /agent/heartbeat HTTP/1.1" 404 2559
+Not Found: /logs
+"POST /logs HTTP/1.1" 404 2526
+Not Found: /logs
+"POST /logs HTTP/1.1" 404 2526
+"POST /api/complaints/predict/ HTTP/1.1" 200 65
+Not Found: /logs
+"POST /logs HTTP/1.1" 404 2526
+"POST /api/complaints/create/ HTTP/1.1" 200 131
+Not Found: /logs
+"POST /logs HTTP/1.1" 404 2526
+Not Found: /logs
+"POST /logs HTTP/1.1" 404 2526
+Not Found: /logs
+"POST /logs HTTP/1.1" 404 2526
+Not Found: /agent/heartbeat
+"POST /agent/heartbeat HTTP/1.1" 404 2559
+Not Found: /logs
+"POST /logs HTTP/1.1" 404 2526
+Not Found: /logs
+"POST /logs HTTP/1.1" 404 2526
+Not Found: /logs
+"POST /logs HTTP/1.1" 404 2526
+Not Found: /logs
+"POST /logs HTTP/1.1" 404 2526
+Not Found: /logs
+"POST /logs HTTP/1.1" 404 2526
+Not Found: /logs
+"POST /logs HTTP/1.1" 404 2526
+Not Found: /agent/heartbeat
+"POST /agent/heartbeat HTTP/1.1" 404 2559
+Not Found: /logs
+"POST /logs HTTP/1.1" 404 2526
+Not Found: /logs
+"POST /logs HTTP/1.1" 404 2526
+Not Found: /logs
+"POST /logs HTTP/1.1" 404 2526
+Not Found: /logs
+"POST /logs HTTP/1.1" 404 2526
+Not Found: /logs
+"POST /logs HTTP/1.1" 404 2526
+Not Found: /logs
+"POST /logs HTTP/1.1" 404 2526
+Not Found: /agent/heartbeat
+"POST /agent/heartbeat HTTP/1.1" 404 2559
+Not Found: /logs
+"POST /logs HTTP/1.1" 404 2526
+Not Found: /logs
+"POST /logs HTTP/1.1" 404 2526
+Not Found: /logs
+"POST /logs HTTP/1.1" 404 2526
+Not Found: /logs
+"POST /logs HTTP/1.1" 404 2526
+Not Found: /logs
+"POST /logs HTTP/1.1" 404 2526
+Not Found: /logs
+"POST /logs HTTP/1.1" 404 2526
+Not Found: /agent/heartbeat
+"POST /agent/heartbeat HTTP/1.1" 404 2559
+Not Found: /logs
+"POST /logs HTTP/1.1" 404 2526
+Not Found: /logs
+"POST /logs HTTP/1.1" 404 2526
