@@ -12,7 +12,7 @@ from tensorflow.keras.applications.mobilenet_v2 import preprocess_input
 
 # ---------- Model Path ----------
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-MODEL_PATH = os.path.join(BASE_DIR, "model.keras")
+MODEL_PATH = os.path.join(BASE_DIR, "final_model.keras")
 
 CLASS_LABELS = [
     "potholes",
