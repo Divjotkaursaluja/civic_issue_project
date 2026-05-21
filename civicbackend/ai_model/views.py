@@ -1,12 +1,13 @@
 from django.http import JsonResponse
 from django.views.decorators.csrf import csrf_exempt
-import keras
-from tensorflow.keras.applications.mobilenet_v2 import preprocess_input
-import numpy as np
+
 import tensorflow as tf
+import numpy as np
 import os
 import io
+
 from PIL import Image
+from tensorflow.keras.applications.mobilenet_v2 import preprocess_input
 
 
 # ---------- Model Path ----------
@@ -21,55 +22,64 @@ CLASS_LABELS = [
     "water_leakage"
 ]
 
-# ---------- AI Function ----------
 def classify_image(file_input):
     print("🔥🔥 NEW AI CODE RUNNING 🔥🔥")
-    try:
-        from PIL import Image
-        import numpy as np
-        from tensorflow.keras.applications.mobilenet_v2 import preprocess_input
 
-        # 🔥 HANDLE BOTH CASES (file OR path)
-        print("🔥 classify_image called")
+    from PIL import Image
+    import numpy as np
+    from tensorflow.keras.applications.mobilenet_v2 import preprocess_input
+
+    try:
+        print("STEP 1")
+
         if not isinstance(file_input, str):
             file_input.seek(0)
 
+        print("STEP 2")
+
         img = Image.open(file_input)
-        img = img.convert("RGB")   # ⚠️ IMPORTANT
+
+        print("STEP 3")
+
+        img = img.convert("RGB")
         img = img.resize((224, 224))
+
+        print("STEP 4")
 
         img = np.array(img)
         img = np.expand_dims(img, axis=0)
         img = preprocess_input(img)
 
-        model = tf.keras.models.load_model(MODEL_PATH, compile=False)
+        print("STEP 5")
 
-        print("✅ Model loaded inside classify_image")
+        model = tf.keras.models.load_model(
+            MODEL_PATH,
+            compile=False,
+            safe_mode=False
+        )
+
+        print("✅ MODEL LOADED")
 
         preds = model.predict(img)
 
-        print("🔥 RAW PREDS:", preds)
+        print("✅ PREDICTION DONE")
+        print("RAW PREDS:", preds)
 
         preds = preds[0]
 
-        print("🔥 AFTER preds[0]:", preds)
-
         index = np.argmax(preds)
-
-        print("🔥 INDEX:", index)
-
         confidence = float(preds[index])
-
-        print("🔥 CONFIDENCE:", confidence)
-
         label = CLASS_LABELS[index]
 
-        print("🔥 LABEL:", label)
+        print("✅ FINAL LABEL:", label)
 
         return label, confidence
 
     except Exception as e:
-        print("AI error:", e)
+        import traceback
+        print("❌ FULL ERROR:")
+        traceback.print_exc()
+
         return "unknown", 0.0
 
 
