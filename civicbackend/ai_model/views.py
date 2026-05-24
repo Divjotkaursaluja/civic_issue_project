@@ -1,13 +1,8 @@
+import os
+
 from django.http import JsonResponse
 from django.views.decorators.csrf import csrf_exempt
-
-import tensorflow as tf
-import numpy as np
-import os
-import io
-
 from PIL import Image
-from tensorflow.keras.applications.mobilenet_v2 import preprocess_input
 
 
 # ---------- Model Path ----------
@@ -19,15 +14,35 @@ CLASS_LABELS = [
     "streetlight",
     "trash_bins",
     "unknown",
-    "water_leakage"
+    "water_leakage",
 ]
 
-def classify_image(file_input):
-    print("🔥🔥 NEW AI CODE RUNNING 🔥🔥")
+_MODEL = None
+_PREPROCESS_INPUT = None
 
-    from PIL import Image
+
+def get_model():
+    global _MODEL, _PREPROCESS_INPUT
+
+    if _MODEL is None:
+        import tensorflow as tf
+        from tensorflow.keras.applications.mobilenet_v2 import preprocess_input
+
+        _PREPROCESS_INPUT = preprocess_input
+        _MODEL = tf.keras.models.load_model(
+            MODEL_PATH,
+            compile=False,
+            safe_mode=False,
+        )
+        print("AI MODEL LOADED")
+
+    return _MODEL, _PREPROCESS_INPUT
+
+
+def classify_image(file_input):
+    print("AI INFERENCE RUNNING")
+
     import numpy as np
-    from tensorflow.keras.applications.mobilenet_v2 import preprocess_input
 
     try:
         print("STEP 1")
@@ -48,21 +63,14 @@ def classify_image(file_input):
 
         img = np.array(img)
         img = np.expand_dims(img, axis=0)
+        model, preprocess_input = get_model()
         img = preprocess_input(img)
 
         print("STEP 5")
 
-        model = tf.keras.models.load_model(
-            MODEL_PATH,
-            compile=False,
-            safe_mode=False
-        )
-
-        print("✅ MODEL LOADED")
-
         preds = model.predict(img)
 
-        print("✅ PREDICTION DONE")
+        print("PREDICTION DONE")
         print("RAW PREDS:", preds)
 
         preds = preds[0]
@@ -71,13 +79,15 @@ def classify_image(file_input):
         confidence = float(preds[index])
         label = CLASS_LABELS[index]
 
-        print("✅ FINAL LABEL:", label)
+        print("FINAL LABEL:", label)
+        print("CONFIDENCE:", confidence)
 
         return label, confidence
 
-    except Exception as e:
+    except Exception:
         import traceback
-        print("❌ FULL ERROR:")
+
+        print("FULL ERROR:")
         traceback.print_exc()
 
         return "unknown", 0.0
@@ -86,7 +96,6 @@ def classify_image(file_input):
 # ---------- API ----------
 @csrf_exempt
 def predict_issue(request):
-
     if request.method != "POST":
         return JsonResponse({"error": "POST request required"}, status=405)
 
@@ -95,10 +104,9 @@ def predict_issue(request):
     if not uploaded_file:
         return JsonResponse({"error": "No file uploaded"}, status=400)
 
-    # 🔥 USE AI FUNCTION HERE
     label, confidence = classify_image(uploaded_file)
 
     return JsonResponse({
         "predicted_class": label,
-        "confidence": confidence
+        "confidence": confidence,
     })

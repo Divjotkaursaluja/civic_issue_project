@@ -2,17 +2,12 @@ services:
   - type: web
     name: civic-issue-backend
     runtime: python
-    plan: starter
+    plan: free
     region: singapore
     buildCommand: bash build.sh
-    preDeployCommand: python civicbackend/manage.py migrate
-    startCommand: cd civicbackend && gunicorn civic_backend.wsgi:application --bind 0.0.0.0:$PORT
+    startCommand: cd civicbackend && gunicorn civic_backend.wsgi:application --bind 0.0.0.0:$PORT --workers 1 --threads 2 --timeout 180 --max-requests 50 --max-requests-jitter 10
     healthCheckPath: /api/complaints/counts/
     autoDeployTrigger: commit
-    disk:
-      name: civic-issue-media
-      mountPath: /opt/render/project/src/civicbackend/media
-      sizeGB: 1
     envVars:
       - key: PYTHON_VERSION
         value: 3.10.14

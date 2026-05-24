@@ -35,14 +35,18 @@ SECRET_KEY = os.environ.get(
 )
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = os.environ.get('DJANGO_DEBUG', 'True').lower() == 'true'
+DEBUG = os.environ.get(
+    'DJANGO_DEBUG',
+    os.environ.get('DEBUG', 'True'),
+).lower() == 'true'
 
+allowed_hosts_env = os.environ.get(
+    'DJANGO_ALLOWED_HOSTS',
+    os.environ.get('ALLOWED_HOSTS', 'localhost,127.0.0.1,.onrender.com'),
+)
 ALLOWED_HOSTS = [
     host.strip()
-    for host in os.environ.get(
-        'DJANGO_ALLOWED_HOSTS',
-        'localhost,127.0.0.1,.onrender.com',
-    ).split(',')
+    for host in allowed_hosts_env.split(',')
     if host.strip()
 ]
 CSRF_TRUSTED_ORIGINS = [

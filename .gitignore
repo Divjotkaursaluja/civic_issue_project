@@ -5,6 +5,7 @@ __pycache__/
 *.pyo
 *.pyd
 .env
+.tools/
 app.log
 db.sqlite3
 node_modules/
