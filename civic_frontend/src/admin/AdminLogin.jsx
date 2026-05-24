@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 import "./AdminLogin.css";
+import { API_BASE_URL } from "../apiBase";
 
 const AdminLogin = () => {
   const [department, setDepartment] = useState("streetlight");
@@ -13,7 +14,7 @@ const AdminLogin = () => {
 
     try {
       const response = await axios.post(
-        "http://127.0.0.1:8000/api/complaints/admin/login/",
+        `${API_BASE_URL}/api/complaints/admin/login/`,
         {
           username,
           password,

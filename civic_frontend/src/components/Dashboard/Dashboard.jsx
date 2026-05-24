@@ -12,6 +12,7 @@ import { IoIosAddCircle } from 'react-icons/io'
 import { FaUserCircle } from 'react-icons/fa'
 import { PiDotsThreeCircleDuotone } from 'react-icons/pi'
 import HeroImg from '../../assets/hero-dkmynbhu.png'
+import { API_BASE_URL } from '../../apiBase'
 
 import { MdOutlineSecurity } from 'react-icons/md'
 import { IoCallOutline } from 'react-icons/io5'
@@ -165,7 +166,7 @@ const captureImage = async () => {
 
     try {
       const response = await axios.post(
-        "http://127.0.0.1:8000/api/complaints/predict/",
+        `${API_BASE_URL}/api/complaints/predict/`,
         formData,
         { headers: { "Content-Type": "multipart/form-data" } }
       );
@@ -184,7 +185,7 @@ try {
   setCheckingDuplicate(true);
 
   const dupRes = await axios.post(
-  "http://127.0.0.1:8000/api/complaints/check-duplicate/",
+  `${API_BASE_URL}/api/complaints/check-duplicate/`,
   {
    
   title: prettyLabel,
@@ -262,7 +263,7 @@ try {
         const formData = new FormData()
         formData.append('file', imageFile, 'image.jpg')
 
-        const response = await axios.post("http://127.0.0.1:8000/api/complaints/predict/", formData, {
+        const response = await axios.post(`${API_BASE_URL}/api/complaints/predict/`, formData, {
   headers: { "Content-Type": "multipart/form-data" },
 });
 
@@ -301,7 +302,7 @@ complaintData.append("user_id", user.uid);
 complaintData.append("user_email", user.email);
 
 const complaintResponse = await axios.post(
-  "http://127.0.0.1:8000/api/complaints/create/",
+  `${API_BASE_URL}/api/complaints/create/`,
   complaintData,
   { headers: { "Content-Type": "multipart/form-data" } }
 );
@@ -536,7 +537,7 @@ setDuplicateComplaint(null);   // ✅ CLEAR DUPLICATE STATE
   onClick={async () => {
 
     await axios.post(
-      `http://127.0.0.1:8000/api/complaints/${duplicateComplaint.id}/vote-up/`
+      `${API_BASE_URL}/api/complaints/${duplicateComplaint.id}/vote-up/`
     );
 
     window.alert("Thanks for confirming the issue!");

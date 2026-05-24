@@ -3,6 +3,7 @@ import { MapContainer, TileLayer, useMap } from "react-leaflet";
 import L from "leaflet";
 import "leaflet.heat";
 import axios from "axios";
+import { API_BASE_URL } from "../apiBase";
 
 const HeatLayer = ({ points }) => {
   const map = useMap();
@@ -52,7 +53,7 @@ export default function ComplaintHeatmap() {
  
     const fetchHeatmap = () => {
       axios
-        .get("http://127.0.0.1:8000/api/complaints/heatmap/")
+        .get(`${API_BASE_URL}/api/complaints/heatmap/`)
         .then(res => {
           setPoints(res.data.points);
         })

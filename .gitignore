@@ -5,6 +5,11 @@ __pycache__/
 *.pyo
 *.pyd
 .env
+app.log
 db.sqlite3
 node_modules/
 staticfiles/
+civicbackend/staticfiles/
+civicbackend/app.log
+civicbackend/media/uploads/
+civic_frontend/dist/

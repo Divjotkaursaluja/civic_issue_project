@@ -1,8 +1,9 @@
 // src/admin/api.js
 import axios from "axios";
+import { API_BASE_URL } from "../apiBase";
 
 const api = axios.create({
-  baseURL: "http://127.0.0.1:8000",// frontend proxy to Django (vite proxy) -> adjust if needed
+  baseURL: API_BASE_URL,// frontend proxy to Django (vite proxy) -> adjust if needed
   withCredentials: false, // set to true if you use session auth and CSRF
 });
 
@@ -20,7 +21,7 @@ export const listComplaintsByDepartment = async (deptSlug) => {
 // Update complaint status (id, newStatus: "Pending"|"In Progress"|"Solved")
 export const updateComplaintStatus = (complaintId, status) => {
   return axios.post(
-    `http://127.0.0.1:8000/api/complaints/${complaintId}/update-status/`,
+    `${API_BASE_URL}/api/complaints/${complaintId}/update-status/`,
     JSON.stringify({ status }),
     {
       headers: {
@@ -33,13 +34,13 @@ export const updateComplaintStatus = (complaintId, status) => {
 // Fallback: fetch all complaints
 export const listAllComplaints = async () => {
   const res = await axios.get(
-    "http://127.0.0.1:8000/api/complaints/all/"
+    `${API_BASE_URL}/api/complaints/all/`
   );
   return res;   // IMPORTANT: return full response
 };
 
 export const getComplaintsByDepartment = (dept) => {
-  return axios.get(`http://127.0.0.1:8000/api/complaints/department/${dept}/`);
+  return axios.get(`${API_BASE_URL}/api/complaints/department/${dept}/`);
 };
 
 
