@@ -1,4 +1,7 @@
+import json
 import os
+import tempfile
+import zipfile
 
 from django.http import JsonResponse
 from django.views.decorators.csrf import csrf_exempt
@@ -19,6 +22,47 @@ CLASS_LABELS = [
 
 _MODEL = None
 _PREPROCESS_INPUT = None
+_COMPATIBLE_MODEL_PATH = None
+
+
+def _strip_empty_quantization_config(value):
+    if isinstance(value, dict):
+        return {
+            key: _strip_empty_quantization_config(item)
+            for key, item in value.items()
+            if not (key == "quantization_config" and item is None)
+        }
+    if isinstance(value, list):
+        return [_strip_empty_quantization_config(item) for item in value]
+    return value
+
+
+def get_compatible_model_path():
+    global _COMPATIBLE_MODEL_PATH
+
+    if _COMPATIBLE_MODEL_PATH is not None:
+        return _COMPATIBLE_MODEL_PATH
+
+    with zipfile.ZipFile(MODEL_PATH, "r") as source:
+        config = json.loads(source.read("config.json"))
+        clean_config = _strip_empty_quantization_config(config)
+
+        if clean_config == config:
+            _COMPATIBLE_MODEL_PATH = MODEL_PATH
+            return _COMPATIBLE_MODEL_PATH
+
+        fd, temporary_path = tempfile.mkstemp(suffix=".keras")
+        os.close(fd)
+        with zipfile.ZipFile(temporary_path, "w") as compatible:
+            for entry in source.infolist():
+                content = source.read(entry.filename)
+                if entry.filename == "config.json":
+                    content = json.dumps(clean_config).encode("utf-8")
+                compatible.writestr(entry, content)
+
+    _COMPATIBLE_MODEL_PATH = temporary_path
+    print("AI MODEL COMPATIBILITY METADATA NORMALIZED")
+    return _COMPATIBLE_MODEL_PATH
 
 
 def get_model():
@@ -30,7 +74,7 @@ def get_model():
 
         _PREPROCESS_INPUT = preprocess_input
         _MODEL = tf.keras.models.load_model(
-            MODEL_PATH,
+            get_compatible_model_path(),
             compile=False,
             safe_mode=False,
         )
