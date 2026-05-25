@@ -37,8 +37,9 @@ services:
   - type: web
     name: civic-issue-frontend
     runtime: static
-    buildCommand: cd civic_frontend && npm ci && npm run build
-    staticPublishPath: civic_frontend/dist
+    rootDir: civic_frontend
+    buildCommand: npm ci && npm run build
+    staticPublishPath: dist
     autoDeployTrigger: commit
     routes:
       - type: rewrite
