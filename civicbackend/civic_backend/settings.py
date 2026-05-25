@@ -250,6 +250,9 @@ if os.path.isdir(os.path.join(BASE_DIR, "static")):
 MEDIA_ROOT = os.environ.get("DJANGO_MEDIA_ROOT", os.path.join(BASE_DIR, "media"))
 STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")
 STORAGES = {
+    "default": {
+        "BACKEND": "django.core.files.storage.FileSystemStorage",
+    },
     "staticfiles": {
         "BACKEND": "whitenoise.storage.CompressedManifestStaticFilesStorage",
     },
