@@ -5,7 +5,7 @@ services:
     plan: free
     region: oregon
     buildCommand: bash build.sh
-    startCommand: cd civicbackend && gunicorn civic_backend.wsgi:application --bind 0.0.0.0:$PORT --workers 1 --threads 2 --timeout 180 --max-requests 50 --max-requests-jitter 10
+    startCommand: cd civicbackend && gunicorn civic_backend.wsgi:application --bind 0.0.0.0:$PORT --workers 1 --threads 2 --timeout 180 --max-requests 1000 --max-requests-jitter 50
     healthCheckPath: /api/complaints/counts/
     autoDeployTrigger: commit
     envVars:
