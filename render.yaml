@@ -3,7 +3,7 @@ services:
     name: civic-issue-backend
     runtime: python
     plan: free
-    region: singapore
+    region: oregon
     buildCommand: bash build.sh
     startCommand: cd civicbackend && gunicorn civic_backend.wsgi:application --bind 0.0.0.0:$PORT --workers 1 --threads 2 --timeout 180 --max-requests 50 --max-requests-jitter 10
     healthCheckPath: /api/complaints/counts/
