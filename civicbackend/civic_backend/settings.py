@@ -63,6 +63,7 @@ SECURE_SSL_REDIRECT = os.environ.get(
     "SECURE_SSL_REDIRECT",
     "False",
 ).lower() == "true"
+SECURE_REDIRECT_EXEMPT = [r"^healthz/$"]
 SESSION_COOKIE_SECURE = os.environ.get(
     "SESSION_COOKIE_SECURE",
     "True" if not DEBUG else "False",
