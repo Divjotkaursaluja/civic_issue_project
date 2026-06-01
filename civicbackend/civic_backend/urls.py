@@ -1,12 +1,17 @@
 from django.contrib import admin
+from django.http import JsonResponse
 from django.urls import path, include, re_path
 from django.conf import settings
 from django.conf.urls.static import static
 from django.views.static import serve
 
 
+def healthz(request):
+    return JsonResponse({"status": "ok"})
+
 
 urlpatterns = [
+    path('healthz/', healthz),
     path('api/complaints/', include('complaints.urls')),   # correct
     path('api/admin/', include('complaints.admin_urls')),
 ]
