@@ -143,6 +143,8 @@ DATABASE_URL = os.environ.get('DATABASE_URL')
 
 if DATABASE_URL:
     parsed_db_url = urlparse(DATABASE_URL)
+    db_connect_timeout = int(os.environ.get("DB_CONNECT_TIMEOUT", "10"))
+    db_read_timeout = int(os.environ.get("DB_READ_TIMEOUT", "20"))
     DATABASES = {
         'default': {
             'ENGINE': 'django.db.backends.mysql',
@@ -154,10 +156,15 @@ if DATABASE_URL:
             'OPTIONS': {
                 'charset': 'utf8mb4',
                 'init_command': "SET sql_mode='STRICT_TRANS_TABLES'",
+                'connect_timeout': db_connect_timeout,
+                'read_timeout': db_read_timeout,
+                'write_timeout': db_read_timeout,
             },
         }
     }
 elif os.environ.get('DB_NAME'):
+    db_connect_timeout = int(os.environ.get("DB_CONNECT_TIMEOUT", "10"))
+    db_read_timeout = int(os.environ.get("DB_READ_TIMEOUT", "20"))
     DATABASES = {
         'default': {
             'ENGINE': 'django.db.backends.mysql',
@@ -169,6 +176,9 @@ elif os.environ.get('DB_NAME'):
             'OPTIONS': {
                 'charset': 'utf8mb4',
                 'init_command': "SET sql_mode='STRICT_TRANS_TABLES'",
+                'connect_timeout': db_connect_timeout,
+                'read_timeout': db_read_timeout,
+                'write_timeout': db_read_timeout,
             },
         }
     }
