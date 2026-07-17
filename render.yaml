@@ -1,3 +1,7 @@
+databases:
+  - name: civic-issue-db
+    plan: free
+
 services:
   - type: web
     name: civic-issue-backend
@@ -11,27 +15,41 @@ services:
     envVars:
       - key: PYTHON_VERSION
         value: 3.10.14
+      - key: RUN_MIGRATIONS
+        value: "true"
       - key: DJANGO_DEBUG
         value: "False"
       - key: DJANGO_SECRET_KEY
         generateValue: true
       - key: DJANGO_ALLOWED_HOSTS
         value: localhost,127.0.0.1,.onrender.com
+      - key: DJANGO_CSRF_TRUSTED_ORIGINS
+        value: https://civic-issue-frontend.onrender.com
+      - key: CORS_ALLOWED_ORIGINS
+        value: https://civic-issue-frontend.onrender.com
+      - key: DATABASE_URL
+        fromDatabase:
+          name: civic-issue-db
+          property: connectionString
+      - key: DATABASE_SSL_REQUIRE
+        value: "True"
       - key: DJANGO_MEDIA_ROOT
         value: /opt/render/project/src/civicbackend/media
-      - key: CORS_ALLOW_ALL_ORIGINS
-        value: "True"
       - key: SECURE_SSL_REDIRECT
         value: "True"
       - key: SESSION_COOKIE_SECURE
         value: "True"
       - key: CSRF_COOKIE_SECURE
         value: "True"
-      - key: DATABASE_URL
+      - key: ADMIN_USERNAME
+        sync: false
+      - key: ADMIN_PASSWORD
         sync: false
       - key: EMAIL_HOST_USER
         sync: false
       - key: EMAIL_HOST_PASSWORD
+        sync: false
+      - key: DEFAULT_FROM_EMAIL
         sync: false
 
   - type: web
@@ -46,5 +64,7 @@ services:
         source: /*
         destination: /index.html
     envVars:
+      - key: NODE_VERSION
+        value: 22.12.0
       - key: VITE_API_BASE_URL
-        sync: false
+        value: https://civic-issue-backend.onrender.com

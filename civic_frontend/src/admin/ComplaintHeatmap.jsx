@@ -3,24 +3,19 @@ import { MapContainer, TileLayer, useMap } from "react-leaflet";
 import L from "leaflet";
 import "leaflet.heat";
 import axios from "axios";
-import { API_BASE_URL } from "../apiBase";
+import { apiUrl } from "../apiConfig";
 
 const HeatLayer = ({ points }) => {
   const map = useMap();
 
   useEffect(() => {
-
     if (!points.length) return;
 
-    // ✅ DEFINE FIRST
-    const heatPoints = points.map(p => [
+    const heatPoints = points.map((p) => [
       p.lat,
       p.lng,
-      p.intensity
+      p.intensity,
     ]);
-
-    // optional debug
-    console.log("Heatmap points:", heatPoints);
 
     const heat = L.heatLayer(heatPoints, {
       radius: 50,
@@ -31,8 +26,8 @@ const HeatLayer = ({ points }) => {
         0.3: "lime",
         0.5: "yellow",
         0.7: "orange",
-        1.0: "red"
-      }
+        1.0: "red",
+      },
     });
 
     heat.addTo(map);
@@ -40,24 +35,22 @@ const HeatLayer = ({ points }) => {
     return () => {
       map.removeLayer(heat);
     };
-
   }, [points, map]);
 
   return null;
 };
-export default function ComplaintHeatmap() {
 
+export default function ComplaintHeatmap() {
   const [points, setPoints] = useState([]);
 
   useEffect(() => {
- 
     const fetchHeatmap = () => {
       axios
-        .get(`${API_BASE_URL}/api/complaints/heatmap/`)
-        .then(res => {
+        .get(apiUrl("/api/complaints/heatmap/"))
+        .then((res) => {
           setPoints(res.data.points);
         })
-        .catch(err => console.error(err));
+        .catch((err) => console.error(err));
     };
 
     fetchHeatmap();
@@ -65,23 +58,21 @@ export default function ComplaintHeatmap() {
     const interval = setInterval(fetchHeatmap, 5000);
 
     return () => clearInterval(interval);
-
   }, []);
 
   return (
     <MapContainer
-  center={[23.2599, 77.4126]}
-  zoom={12}
-  scrollWheelZoom={true}
-  style={{ height: "1000px", width: "100%" }}
->
+      center={[23.2599, 77.4126]}
+      zoom={12}
+      scrollWheelZoom={true}
+      style={{ height: "1000px", width: "100%" }}
+    >
       <TileLayer
-        attribution="© OpenStreetMap"
+        attribution="OpenStreetMap"
         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
       />
 
       <HeatLayer points={points} />
-
     </MapContainer>
   );
 }

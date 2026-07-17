@@ -13,4 +13,6 @@ staticfiles/
 civicbackend/staticfiles/
 civicbackend/app.log
 civicbackend/media/uploads/
+civicbackend/media/complaint_images/test.jpg
 civic_frontend/dist/
+dist/

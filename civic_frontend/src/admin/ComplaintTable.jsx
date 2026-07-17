@@ -1,6 +1,7 @@
 // src/admin/ComplaintTable.jsx
 import React from "react";
 import "./admin.css";
+import { mediaUrl } from "../apiConfig";
 
 
 const STATUS_SEQUENCE = ["Pending", "In Progress", "Solved"];
@@ -64,7 +65,7 @@ export default function ComplaintTable({ deptKey, complaints = [], loading, onCl
 
                     <td>
 {(c.image_url || c.image) ? (
-  <img src={c.image_url || c.image} alt="preview" style={{ width: 80 }} />
+  <img src={mediaUrl(c.image_url || c.image)} alt="preview" style={{ width: 80 }} />
 ) : "—"}
                     </td>
                     <td>

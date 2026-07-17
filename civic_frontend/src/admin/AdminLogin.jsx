@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 import "./AdminLogin.css";
-import { API_BASE_URL } from "../apiBase";
+import { apiUrl } from "../apiConfig";
 
 const AdminLogin = () => {
   const [department, setDepartment] = useState("streetlight");
@@ -13,16 +13,12 @@ const AdminLogin = () => {
     e.preventDefault();
 
     try {
-      const response = await axios.post(
-        `${API_BASE_URL}/api/complaints/admin/login/`,
-        {
-          username,
-          password,
-          department,
-        }
-      );
+      const response = await axios.post(apiUrl("/api/complaints/admin/login/"), {
+        username,
+        password,
+        department,
+      });
 
-      // Save token
       localStorage.setItem("admin_token", response.data.token);
       localStorage.setItem("admin_department", department);
 
@@ -38,16 +34,14 @@ const AdminLogin = () => {
         <h2>Admin Login</h2>
 
         <label>Department</label>
-     <select value={department} onChange={(e) => setDepartment(e.target.value)}>
-  <option value="streetlight">Streetlight Department</option>
-  <option value="potholes">Potholes Department</option>
-  <option value="trash_bins">Garbage Department</option>
-  <option value="water_leakage">Water Leakage Department</option>
-  <option value="garbage">Garbage (Old Admin)</option>
-  <option value="all">Higher Department (All)</option>
-</select>
-
-
+        <select value={department} onChange={(e) => setDepartment(e.target.value)}>
+          <option value="streetlight">Streetlight Department</option>
+          <option value="potholes">Potholes Department</option>
+          <option value="trash_bins">Garbage Department</option>
+          <option value="water_leakage">Water Leakage Department</option>
+          <option value="garbage">Garbage (Old Admin)</option>
+          <option value="all">Higher Department (All)</option>
+        </select>
 
         <label>Username</label>
         <input

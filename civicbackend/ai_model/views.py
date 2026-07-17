@@ -8,7 +8,6 @@ from django.views.decorators.csrf import csrf_exempt
 from PIL import Image
 
 
-# ---------- Model Path ----------
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 MODEL_PATH = os.path.join(BASE_DIR, "final_model.keras")
 
@@ -89,34 +88,18 @@ def classify_image(file_input):
     import numpy as np
 
     try:
-        print("STEP 1")
-
         if not isinstance(file_input, str):
             file_input.seek(0)
 
-        print("STEP 2")
-
         img = Image.open(file_input)
-
-        print("STEP 3")
-
         img = img.convert("RGB")
         img = img.resize((224, 224))
-
-        print("STEP 4")
-
         img = np.array(img)
         img = np.expand_dims(img, axis=0)
+
         model, preprocess_input = get_model()
         img = preprocess_input(img)
-
-        print("STEP 5")
-
         preds = model.predict(img)
-
-        print("PREDICTION DONE")
-        print("RAW PREDS:", preds)
-
         preds = preds[0]
 
         index = np.argmax(preds)
@@ -137,7 +120,6 @@ def classify_image(file_input):
         return "unknown", 0.0
 
 
-# ---------- API ----------
 @csrf_exempt
 def predict_issue(request):
     if request.method != "POST":

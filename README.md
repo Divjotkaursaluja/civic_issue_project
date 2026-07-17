@@ -1,16 +1,27 @@
-<<<<<<< HEAD
-# React + Vite
+# AI-Powered Civic Issue Reporting System
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+React/Vite frontend and Django backend for reporting civic issues with image upload, duplicate detection, department dashboards, status tracking, and TensorFlow-based image classification.
 
-Currently, two official plugins are available:
+## Local development
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Backend:
 
-## Expanding the ESLint configuration
+```bash
+cd civicbackend
+python manage.py migrate
+python manage.py runserver
+```
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
-=======
-# Bharat_Innovators
->>>>>>> d99a71b4127618ac9fa2bda2077240ff1c302b72
+Frontend:
+
+```bash
+cd civic_frontend
+npm install
+npm run dev
+```
+
+Set `VITE_API_BASE_URL` for the frontend when the backend is not running at `http://127.0.0.1:8000`.
+
+## Render
+
+The repository includes `render.yaml` for a Django web service, Vite static site, and Render Postgres database. Required runtime versions are pinned with `.python-version`, `runtime.txt`, and `civic_frontend/.node-version`.

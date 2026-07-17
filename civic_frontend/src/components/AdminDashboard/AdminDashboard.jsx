@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import "./AdminDashboard.css";
+import { apiUrl, mediaUrl } from "../../apiConfig";
 
 const AdminDashboard = () => {
   const [complaints, setComplaints] = useState([]);
@@ -16,7 +17,7 @@ const AdminDashboard = () => {
   const fetchComplaints = async (dept) => {
     try {
       const response = await axios.get(
-        `http://127.0.0.1:8000/api/complaints/department/${dept}/`
+        apiUrl(`/api/complaints/department/${dept}/`)
       );
 
       setComplaints(response.data.complaints);
@@ -29,7 +30,7 @@ const AdminDashboard = () => {
 
   const updateStatus = async (id, newStatus) => {
     try {
-      await axios.patch(`http://127.0.0.1:8000/api/complaints/update/${id}/`, {
+      await axios.post(apiUrl(`/api/complaints/${id}/update-status/`), {
         status: newStatus,
       });
 
@@ -69,7 +70,7 @@ const AdminDashboard = () => {
 
                 <td>
                   <img
-                    src={`http://127.0.0.1:8000${c.image}`}
+                    src={mediaUrl(c.image_url || c.image)}
                     alt="complaint"
                     className="complaint-img"
                   />

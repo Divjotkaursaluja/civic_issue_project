@@ -12,7 +12,6 @@ import { IoIosAddCircle } from 'react-icons/io'
 import { FaUserCircle } from 'react-icons/fa'
 import { PiDotsThreeCircleDuotone } from 'react-icons/pi'
 import HeroImg from '../../assets/hero-dkmynbhu.png'
-import { API_BASE_URL } from '../../apiBase'
 
 import { MdOutlineSecurity } from 'react-icons/md'
 import { IoCallOutline } from 'react-icons/io5'
@@ -22,6 +21,7 @@ import { FaTrafficLight } from 'react-icons/fa'
 import { FaLocationDot } from 'react-icons/fa6'
 import { FaRegQuestionCircle } from 'react-icons/fa'
 import axios from "axios";
+import { apiUrl, mediaUrl } from '../../apiConfig'
 
 
 const Dashboard = () => {
@@ -166,7 +166,7 @@ const captureImage = async () => {
 
     try {
       const response = await axios.post(
-        `${API_BASE_URL}/api/complaints/predict/`,
+        apiUrl("/api/complaints/predict/"),
         formData,
         { headers: { "Content-Type": "multipart/form-data" } }
       );
@@ -185,7 +185,7 @@ try {
   setCheckingDuplicate(true);
 
   const dupRes = await axios.post(
-  `${API_BASE_URL}/api/complaints/check-duplicate/`,
+  apiUrl("/api/complaints/check-duplicate/"),
   {
    
   title: prettyLabel,
@@ -263,7 +263,7 @@ try {
         const formData = new FormData()
         formData.append('file', imageFile, 'image.jpg')
 
-        const response = await axios.post(`${API_BASE_URL}/api/complaints/predict/`, formData, {
+        const response = await axios.post(apiUrl("/api/complaints/predict/"), formData, {
   headers: { "Content-Type": "multipart/form-data" },
 });
 
@@ -272,12 +272,9 @@ try {
         const result = response.data
         console.log('AI prediction:', result)
 
-        if (result && result.title) {
-          // optionally set the complaint title to the predicted class
-setComplaintTitle(prettyLabel); // Correct dropdown fill
-
-        } else {
-          
+        if (result && result.predicted_class) {
+          const prettyLabel = LABEL_MAP[result.predicted_class] || "Unknown Issue";
+          setComplaintTitle(prettyLabel);
         }
       } catch (err) {
         console.error('Prediction API error:', err)
@@ -302,7 +299,7 @@ complaintData.append("user_id", user.uid);
 complaintData.append("user_email", user.email);
 
 const complaintResponse = await axios.post(
-  `${API_BASE_URL}/api/complaints/create/`,
+  apiUrl("/api/complaints/create/"),
   complaintData,
   { headers: { "Content-Type": "multipart/form-data" } }
 );
@@ -518,7 +515,7 @@ setDuplicateComplaint(null);   // ✅ CLEAR DUPLICATE STATE
 
   <div className="duplicate-image">
     <img
-  src={duplicateComplaint.image}
+  src={mediaUrl(duplicateComplaint.image)}
   alt="Previous complaint"
 />
   </div>
@@ -537,7 +534,7 @@ setDuplicateComplaint(null);   // ✅ CLEAR DUPLICATE STATE
   onClick={async () => {
 
     await axios.post(
-      `${API_BASE_URL}/api/complaints/${duplicateComplaint.id}/vote-up/`
+      apiUrl(`/api/complaints/${duplicateComplaint.id}/vote-up/`)
     );
 
     window.alert("Thanks for confirming the issue!");
