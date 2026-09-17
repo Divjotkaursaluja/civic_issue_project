@@ -26,7 +26,9 @@ SECRET_KEY = 'django-insecure-xamm0%0+!ksse7zr7cc1mx&w7t)zv8_5w626q=x#8_%zyn@o+^
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["civic-issue-backend-fqq2.onrender.com",
+    "localhost",
+    "127.0.0.1",]
 CSRF_TRUSTED_ORIGINS = [
     "http://localhost:5173",
     "http://127.0.0.1:5173",
