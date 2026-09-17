@@ -56,6 +56,9 @@ const App = () => {
               isAuthenticated ? <Profile /> : <Navigate to="/login" replace />
             }
           />
+          <Route path="/helpline" element={<Helpline />} />
+          <Route path="/traffic" element={<Traffic />} />
+          <Route path="/bmc" element={<BMC />} />
 
           {/* ADMIN ROUTES */}
           <Route path="/admin-login" element={<AdminLogin />} />

@@ -331,11 +331,11 @@ setDuplicateComplaint(null);   // ✅ CLEAR DUPLICATE STATE
       <div className="dashboard-banner">
         <img src={HeroImg} alt="BMP" />
       </div>
-      <div className="button-grid">
-        <div className="grid-button">
+     <div className="button-grid">
+        <div className="grid-button" onClick={() => navigate('/bmc')}>
           <MdOutlineSecurity /> <span>BMC</span>
         </div>
-        <div className="grid-button">
+        <div className="grid-button" onClick={() => navigate('/helpline')}>
           <IoCallOutline />
           <span>Helpline</span>
         </div>
@@ -343,19 +343,28 @@ setDuplicateComplaint(null);   // ✅ CLEAR DUPLICATE STATE
           <FaExclamationCircle />
           <span className="button-label">Complaint</span>
         </div>
-        <div className="grid-button">
+        <div
+          className="grid-button"
+          onClick={() => alert('Navigating to B Bus section')}
+        >
           <FaBusAlt />
           <span>B Bus</span>
         </div>
-        <div className="grid-button">
+        <div className="grid-button" onClick={() => navigate('/traffic')}>
           <FaTrafficLight />
           <span>Traffic</span>
         </div>
-        <div className="grid-button">
+        <div
+          className="grid-button"
+          onClick={() => alert('Navigating to Nearby facilities section')}
+        >
           <FaLocationDot />
           <span>Nearby facilities</span>
         </div>
-        <div className="grid-button">
+        <div
+          className="grid-button"
+          onClick={() => alert('Navigating to FAQ section')}
+        >
           <FaRegQuestionCircle />
           <span>FAQ</span>
         </div>
