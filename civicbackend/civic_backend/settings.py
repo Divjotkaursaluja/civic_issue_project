@@ -30,6 +30,7 @@ ALLOWED_HOSTS = ["civic-issue-backend-fqq2.onrender.com",
     "localhost",
     "127.0.0.1",]
 CSRF_TRUSTED_ORIGINS = [
+    "https://civic-issue-frontend-qqxn.onrender.com",
     "http://localhost:5173",
     "http://127.0.0.1:5173",
 ]
@@ -47,6 +48,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'rest_framework',
+    'corsheaders',
 
      'accounts',
     'complaints',
@@ -59,12 +61,13 @@ INSTALLED_APPS = [
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
+    "corsheaders.middleware.CorsMiddleware",
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    "corsheaders.middleware.CorsMiddleware",
+    
 ]
 
 ROOT_URLCONF = 'civic_backend.urls'
