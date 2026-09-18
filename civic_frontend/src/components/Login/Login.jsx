@@ -19,7 +19,9 @@ const Login = () => {
   const [isLoading, setIsLoading] = useState(false)
   const [showOtpForm, setShowOtpForm] = useState(false)
   const [confirmationResult, setConfirmationResult] = useState(null)
-  const [showPassword, setShowPassword] = useState(false) // New state for password visibility
+  const [showPassword, setShowPassword] = useState(false) 
+  const [phoneNumber, setPhoneNumber] = useState('')
+const [otp, setOtp] = useState('')// New state for password visibility
   const navigate = useNavigate()
 
   useEffect(() => {

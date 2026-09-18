@@ -14,7 +14,11 @@ import Dashboard from './components/Dashboard/Dashboard'
 import Login from './components/Login/Login'
 import Signup from './components/Signup/Signup'
 import Profile from './components/Profile/Profile'
+import Helpline from './components/Helpline/Helpline'
+import Traffic from './components/Traffic/Traffic'
+import BMC from './components/BMC/BMC'
 import './App.css'
+
 
 const App = () => {
   const [isAuthenticated, setIsAuthenticated] = useState(false)
